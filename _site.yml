@@ -1,0 +1,14 @@
+name: "kasaai-blog"
+title: "Blog"
+description: |
+  Blog
+base_url: https://blog.kasa.ai
+output_dir: "_site"
+navbar:
+  logo: images/white-symbol-transparent.png
+output:
+  radix::radix_article:
+    css: style.css
+collections:
+  posts:
+    citations: false

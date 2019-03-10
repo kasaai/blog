@@ -1,17 +1,12 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to Kasa AI Blog",
-    "description": "Welcome to our new blog, Kasa AI Blog. We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
-      }
-    ],
+    "title": "Cool stuff incoming",
+    "description": {},
+    "author": [],
     "date": "2019-03-10",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-03-10T13:13:37-04:00"
+    "last_modified": "2019-03-10T13:49:59-04:00"
   }
 ]

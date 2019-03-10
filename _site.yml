@@ -1,14 +1,15 @@
 name: "kasaai-blog"
 title: "Blog"
 description: |
-  Blog
-base_url: https://blog.kasa.ai
+  Kasa AI Blog
 output_dir: "_site"
 navbar:
-  logo: images/white-symbol-transparent.png
-output:
-  radix::radix_article:
+  logo: img/logo-white.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: 
+  distill::distill_article:
     css: style.css
-collections:
-  posts:
-    citations: false

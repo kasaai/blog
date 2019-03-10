@@ -1,17 +1,17 @@
 [
   {
-    "path": "posts/2018-11-27-stay-tuned/",
-    "title": "Stay Tuned",
-    "description": "Just a placeholder.",
+    "path": "posts/welcome/",
+    "title": "Welcome to Kasa AI Blog",
+    "description": "Welcome to our new blog, Kasa AI Blog. We hope you enjoy \nreading what we have to say!",
     "author": [
       {
-        "name": "Kevin Kuo",
-        "url": {}
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
       }
     ],
-    "date": "2018-11-27",
+    "date": "2019-03-10",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-11-27T18:11:31-05:00"
+    "last_modified": "2019-03-10T13:13:37-04:00"
   }
 ]

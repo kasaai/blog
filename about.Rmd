@@ -1,7 +1,7 @@
 ---
-title: "About this blog"
+title: "About"
 description: |
-  Some additional details about the blog
+  This is the official blog of [Kasa AI](https://kasa.ai).
 ---
 
 ```{r setup, include=FALSE}

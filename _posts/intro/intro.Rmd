@@ -37,6 +37,7 @@ We outline below some aspects of today’s workflows we aim to optimize.
 ### Kasa AI
 
 Out of the gate, Kasa AI will focus on the following types of projects:
+
 - Conducting applied artificial intelligence research and author papers and blog posts.
 - Develop open source software to enable adoption of new technologies in practice.
 - Create educational material to help team transition to code-first and reproducible workflows.

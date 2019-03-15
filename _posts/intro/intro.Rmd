@@ -5,7 +5,7 @@ description: |
 author:
   - name: Kevin Kuo
     affiliation: RStudio
-date: 03-15-2019
+date: 03-19-2019
 output:
   distill::distill_article:
     self_contained: false

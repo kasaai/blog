@@ -1,5 +1,5 @@
 name: "kasaai-blog"
-title: "Blog"
+title: "Kasa AI Blog"
 description: |
   Kasa AI Blog
 output_dir: "_site"
@@ -10,6 +10,13 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fa fa-rss
+      href: index.xml
 output: 
   distill::distill_article:
     css: style.css
+base_url: https://blog.kasa.ai
+google_analytics: "UA-130804330-2"
+collections:
+  posts:
+    share: [twitter, linkedin]

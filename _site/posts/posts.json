@@ -1,12 +1,17 @@
 [
   {
-    "path": "posts/welcome/",
-    "title": "Cool stuff incoming",
-    "description": {},
-    "author": [],
-    "date": "2019-03-10",
+    "path": "posts/intro/",
+    "title": "Introducing Kasa AI",
+    "description": "Accelerating innovation in insurance analytics through open collaboration.",
+    "author": [
+      {
+        "name": "Kevin Kuo",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-01",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-03-10T13:49:59-04:00"
+    "last_modified": "2019-04-01T13:16:50-04:00"
   }
 ]

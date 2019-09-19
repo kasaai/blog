@@ -1,0 +1,134 @@
+---
+title: "simulationmachine: Synthesizing Individual Claims Data"
+description: |
+  Generating claims data that can be used for loss reserving research and backtesting.
+authors:
+  - name: "Andrea Gabrielli"
+    url: https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people
+    affiliation: RiskLab, ETH Zürich
+    affiliation_url: https://risklab.ch/
+  - name: "Kevin Kuo"
+    url: https://kevinykuo.com/
+    affiliation: Kasa AI
+    affiliation_url: https://kasa.ai/
+  - name: "Mario V. Wüthrich"
+    url: https://people.math.ethz.ch/~wueth/
+    affiliation: RiskLab, ETH Zürich
+    affiliation_url: https://risklab.ch/
+slug: simulationmachine
+bibliography: bibliography.bib
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Today we're excited to announce the [simulationmachine](https://github.com/kasaai/simulationmachine) package, based on the paper *An Individual Claims History Simulation Machine*[@gabrielli2018individual]. If you're a practitioner or researcher looking for realistic data for testing reserving or claims forecasting models, you may find it interesting.
+
+The package allows you to simulate individual claim characteristics along with their cash flow histories. We first show a quick example before delving into details of the algorithm.
+
+## simulationmachine
+
+You can download simulationmachine from GitHub with
+
+```r
+# install.packages("remotes")
+remotes::install_github("kasaai/simulationmachine")
+```
+
+First, specify the desired characteristics of the simulation:
+
+```{r echo=TRUE}
+library(simulationmachine)
+
+charm <- simulation_machine(
+  num_claims = 50000, 
+  lob_distribution = c(0.25, 0.25, 0.30, 0.20), 
+  inflation = c(0.01, 0.01, 0.01, 0.01), 
+  sd_claim = 0.85, 
+  sd_recovery = 0.75
+)
+charm
+```
+
+Here, we are noting that we would like 
+
+- Approximately 50,000 claims (note that this is an expected value, as claim incidence is also simulated)
+- The distribution among the four lines of business is 25%, 25%, 30%, and 20%
+- Inflation is a constant 1% for all lines of business
+- Claims are lognormally distributed with a standard deivation of 0.85
+- Recoveries are lognormally distributed with a standard deviation of 0.75
+
+Once we have the specification, we can perform the actual simulation using the `conjure()` function:
+
+```{r, message = FALSE}
+library(tidyverse)
+records <- conjure(charm, seed = 100)
+glimpse(records)
+```
+
+In the output data frame, each row corresponds to a snapshot in time of a claim. At this point, the dataset is ready for use in a claims level exercise. However, if you're looking for aggregate triangle data, that can be easily done with a few transformations. Say we're interested in a cumulative paid loss triangle as of calendar year 1999 (so it'll fit in the margins of this blog post), we can use the following snippet:
+
+```{r, echo = TRUE}
+triangle <- records %>% 
+  filter(accident_year + development_year <= 1999) %>% 
+  # aggregate to AY-dev cells
+  group_by(accident_year, development_year) %>% 
+  summarize(paid_loss = sum(paid_loss)) %>% 
+  group_by(accident_year) %>% 
+  # calculate cumulative losses
+  mutate(cumulative_paid_loss = cumsum(paid_loss)) %>% 
+  select(accident_year, development_year, cumulative_paid_loss) %>% 
+  # reshape the data
+  pivot_wider(
+    names_from = "development_year", 
+    values_from = "cumulative_paid_loss"
+  )
+```
+
+```{r, eval = FALSE, echo = TRUE}
+triangle
+```
+
+```{r, echo = FALSE}
+withr::with_options(list(knitr.kable.NA = ""), {
+  triangle %>% 
+    ungroup() %>% 
+    mutate(accident_year = as.character(accident_year)) %>% 
+    knitr::kable(format.args = list(big.mark = ","))
+})
+
+```
+
+## Motivations & Technical Details
+
+The aim of the Simulation Machine[@gabrielli2018individual] is to develop a stochastic simulation machine that generates individual claims histories of non-life insurance claims. Recently, loss reserving research has been very active, leading to many new ideas and techniques to estimate the claims reserves required to cover future payments for claims that have occurred in the past. In particular, there has been a lot of effort put into the development of claims reserving methods based on individual claims histories. However, a main shortcoming in this field of research is that there is no publicly available individual claims history data, as insurance companies are often unwilling or unable to publish their data due to confidentiality reasons. Therefore, there is no possibility to back-test the newly developed claims reserving methods. By developing the algorithm and the simulation package, we hope to provide a common ground for the actuarial community in the form of publicly available data for individual claims reserving.
+
+Of course, the simulated individual claims histories should be as realistic as possible to reflect a real insurance claims portfolio. Therefore, the simulation machine was calibrated to real experience data graciously provided by the [Swiss National Accident Insurance Fund (SUVA)](https://www.suva.ch/en?lang=en). This dataset consisted of $n \approx 10$ million individual claims that occurred between 1994 and 2005, and for each of these individual claims we had full information of 12 years of claims development as well as of the relevant feature information, which we discuss below.
+
+Internally, the algorithm consists of two main simulation stages. In the first stage, a portfolio of individual claims characteristics is generated, and each claim contains the following features:
+
+- The line of business (`lob`), of which there are four
+- The claims code (`cc`), which denotes the labor sector of the claimant, with 51 possible values
+- The accident year (`accident_year`)
+- The accident quarter (`accident_quarter`)
+- The age of the injured `age` (in 5 years age buckets), which can take on values `15, 20, ..., 70`
+- The injured body part (`injured_part`), with 46 possible values
+
+<!-- Note that for the labels $\{1, \dots, 53\}$ and $\{1, \dots, 99\}$ of the two features claims code and injured body part we have gaps, that is, in total we can simulate from 51 different claims codes and from 46 different injured body parts. -->
+
+Once the static claim characteristics are generated, we use them in the second simulation stage to generate:
+
+- The (incremental) individual claims cash flow, `paid_loss`, for `development_year = 0, ..., 11`
+- The claim status process `claim_status_open` (again for  `development_year = 0, ..., 11`) which is an indicator variable denoting whether the considered claim is open at the end of the accounting year `accident_year + development_year`
+
+We remark that we only consider yearly payments, that is, multiple payments and recovery payments within each calendar year are aggregated into a single annual payment. This single annual payment can either be positive or negative, depending whether we have higher claim payments or higher recovery payments in that year. The sum over all yearly payments of any given claim is constrained to be nonnegative because recoveries cannot exceed payments.
+
+The simulation of the cash flow process and the claim status process is based on neural networks to incorporate individual claims feature information. In recent years, neural networks have proved to be very powerful tools in classification and regression problems. Their drawbacks are that they are rather difficult to calibrate and, once calibrated, they act almost like black boxes between inputs and outputs. Of course, this is a major disadvantage in interpretation and getting deeper insight. However, the missing interpretation is not necessarily a  disadvantage in this simulation machine because it implies, in back-testing other methods, that the true data generating mechanism cannot easily be guessed.
+
+Summarizing, simulationmachine, with the algorithm it implements, provides a way to generate a synthetic insurance dataset consisting of individual claims. These claims contain a rich set of feature information, along with time series of cash flows and claims status indicators. In particular, we can simulate claims from 12 different accident years, and for every individual claim we are provided with 12 years of claims development.
+
+## Consistent Interfaces for Simulation
+
+The workflow of generating data for research and backtesting is shared by researchers and practitioners alike. We believe that it is worthwhile to optimize this workflow by streamlining the process of generating data using different simulators. The simulationmachine package implements the [conjuror](https://conjuror.kasa.ai/) interface, which includes a set of conventions for simulator package authors to consider. These conventions are currently under active development, and we encourage you to participate in shaping them.

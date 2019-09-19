@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/simulation-machine/",
+    "title": "simulationmachine: Synthesizing Individual Claims Data",
+    "description": "Generating claims data that can be used for loss reserving research and backtesting.",
+    "author": [
+      {
+        "name": "Andrea Gabrielli",
+        "url": "https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people"
+      },
+      {
+        "name": "Kevin Kuo",
+        "url": "https://kevinykuo.com/"
+      },
+      {
+        "name": "Mario V. Wüthrich",
+        "url": "https://people.math.ethz.ch/~wueth/"
+      }
+    ],
+    "date": "2019-09-19",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-09-19T01:22:07-04:00"
+  },
+  {
     "path": "posts/intro/",
     "title": "Introducing Kasa AI",
     "description": "Accelerating innovation in insurance analytics through open collaboration.",
@@ -12,6 +35,6 @@
     "date": "2019-04-01",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-08-23T14:36:41-04:00"
+    "last_modified": "2019-08-23T14:36:42-04:00"
   }
 ]

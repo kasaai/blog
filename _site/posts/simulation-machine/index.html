@@ -2379,6 +2379,10 @@ Specs:
 </ul>
 <p>Once we have the specification, we can perform the actual simulation using the <code>conjure()</code> function:</p>
 <div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(tidyverse)
+records &lt;- conjure(charm, seed = 100)
+glimpse(records)</code></pre>
 <pre><code>
 Observations: 603,324
 Variables: 11

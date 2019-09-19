@@ -62,7 +62,7 @@ Here, we are noting that we would like
 
 Once we have the specification, we can perform the actual simulation using the `conjure()` function:
 
-```{r, message = FALSE}
+```{r, echo = TRUE, message = FALSE}
 library(tidyverse)
 records <- conjure(charm, seed = 100)
 glimpse(records)

@@ -24,7 +24,7 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Today we're excited to announce the [simulationmachine](https://github.com/kasaai/simulationmachine) package, based on the paper *An Individual Claims History Simulation Machine*[@gabrielli2018individual]. If you're a practitioner or researcher looking for realistic data for testing reserving or claims forecasting models, you may find it interesting.
+Today we're excited to announce the [simulationmachine](https://github.com/kasaai/simulationmachine) package, based on the paper *An Individual Claims History Simulation Machine*[@gabrielli2018individual]. We created this package for the practitioner or researcher who needs realistic data for testing reserving or claims analytics modeling workflows.
 
 The package allows you to simulate individual claim characteristics along with their cash flow histories. We first show a quick example before delving into details of the algorithm.
 

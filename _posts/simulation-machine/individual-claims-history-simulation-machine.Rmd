@@ -1,7 +1,7 @@
 ---
 title: "simulationmachine: Synthesizing Individual Claims Data"
 description: |
-  Generating claims data that can be used for loss reserving research and backtesting.
+  Generate claims data for loss reserving research and backtesting.
 authors:
   - name: "Andrea Gabrielli"
     url: https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people
@@ -17,7 +17,10 @@ authors:
     affiliation_url: https://risklab.ch/
 slug: simulationmachine
 bibliography: bibliography.bib
-output: distill::distill_article
+date: 09-25-2019
+output:
+  distill::distill_article:
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +40,7 @@ You can download simulationmachine from GitHub with
 remotes::install_github("kasaai/simulationmachine")
 ```
 
-First, specify the desired characteristics of the simulation:
+First, specify the desired characteristics of the simulation, by scribing a *charm* (which we'll use to do some [*conjuoring*](https://conjuror.kasa.ai) later!):
 
 ```{r echo=TRUE}
 library(simulationmachine)
@@ -52,7 +55,7 @@ charm <- simulation_machine(
 charm
 ```
 
-Here, we are noting that we would like 
+The charm encodes the details of the simulation we want to create. In this case, the simulation contains the following:
 
 - Approximately 50,000 claims (note that this is an expected value, as claim incidence is also simulated)
 - The distribution among the four lines of business is 25%, 25%, 30%, and 20%
@@ -68,9 +71,9 @@ records <- conjure(charm, seed = 100)
 glimpse(records)
 ```
 
-In the output data frame, each row corresponds to a snapshot in time of a claim. At this point, the dataset is ready for use in a claims level exercise. However, if you're looking for aggregate triangle data, that can be easily done with a few transformations. Say we're interested in a cumulative paid loss triangle as of calendar year 1999 (so it'll fit in the margins of this blog post), we can use the following snippet:
+In the output data frame, each row corresponds to a snapshot in time of a claim. The number of rows, `r format(nrow(records), scientific = FALSE, big.mark = ",")`, corresponds to `r format(nrow(records) / 12, scientific = FALSE, big.mark = ",")` claims times 12 time steps. At this point, the dataset is ready for use in a claims level exercise. However, if you're looking for aggregate triangle data, that can be easily done with a few transformations. Say we're interested in a cumulative paid loss triangle as of calendar year 1999 (so it'll fit in the margins of this blog post), we can use the following snippet:
 
-```{r, echo = TRUE}
+```{r, echo = FALSE}
 triangle <- records %>% 
   filter(accident_year + development_year <= 1999) %>% 
   # aggregate to AY-dev cells
@@ -86,8 +89,22 @@ triangle <- records %>%
     values_from = "cumulative_paid_loss"
   )
 ```
-
 ```{r, eval = FALSE, echo = TRUE}
+triangle <- records %>% 
+  filter(accident_year + development_year <= 1999) %>% 
+  # aggregate to AY-dev cells
+  group_by(accident_year, development_year) %>% 
+  summarize(paid_loss = sum(paid_loss)) %>% 
+  group_by(accident_year) %>% 
+  # calculate cumulative losses
+  mutate(cumulative_paid_loss = cumsum(paid_loss)) %>% 
+  select(accident_year, development_year, cumulative_paid_loss) %>% 
+  # reshape the data
+  pivot_wider(
+    names_from = "development_year", 
+    values_from = "cumulative_paid_loss"
+  )
+
 triangle
 ```
 
@@ -132,3 +149,7 @@ Summarizing, simulationmachine, with the algorithm it implements, provides a way
 ## Consistent Interfaces for Simulation
 
 The workflow of generating data for research and backtesting is shared by researchers and practitioners alike. We believe that it is worthwhile to optimize this workflow by streamlining the process of generating data using different simulators. The simulationmachine package implements the [conjuror](https://conjuror.kasa.ai/) interface, which includes a set of conventions for simulator package authors to consider. These conventions are currently under active development, and we encourage you to participate in shaping them.
+
+## Acknowledgments {.appendix}
+
+We would like to thank Ryan Thomas, Hadrien Dykiel, and Frankie Logan for their helpful comments.

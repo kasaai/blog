@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://blog.kasa.ai/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -20,366 +19,43 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Kasa AI Blog: </title>
+  <title>simulationmachine: Synthesizing Individual Claims Data</title>
+  
+  <meta property="description" itemprop="description" content="Generate claims data for loss reserving research and backtesting."/>
   
   
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2019-09-26"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-09-26"/>
+  <meta name="article:author" content="Andrea Gabrielli"/>
+  <meta name="article:author" content="Kevin Kuo"/>
+  <meta name="article:author" content="Mario V. Wüthrich"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Kasa AI Blog: "/>
+  <meta property="og:title" content="simulationmachine: Synthesizing Individual Claims Data"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Generate claims data for loss reserving research and backtesting."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Kasa AI Blog"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Kasa AI Blog: "/>
+  <meta property="twitter:title" content="simulationmachine: Synthesizing Individual Claims Data"/>
+  <meta property="twitter:description" content="Generate claims data for loss reserving research and backtesting."/>
   
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=An individual claims history simulation machine;citation_publication_date=2018;citation_publisher=Multidisciplinary Digital Publishing Institute;citation_volume=6;citation_author=Andrea Gabrielli;citation_author=Mario V. Wüthrich"/>
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":[""]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","authors","slug","bibliography","date","output","author"]}},"value":[{"type":"character","attributes":{},"value":["simulationmachine: Synthesizing Individual Claims Data"]},{"type":"character","attributes":{},"value":["Generate claims data for loss reserving research and backtesting.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andrea Gabrielli"]},{"type":"character","attributes":{},"value":["https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["https://kevinykuo.com/"]},{"type":"character","attributes":{},"value":["Kasa AI"]},{"type":"character","attributes":{},"value":["https://kasa.ai/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mario V. Wüthrich"]},{"type":"character","attributes":{},"value":["https://people.math.ethz.ch/~wueth/"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]}]},{"type":"character","attributes":{},"value":["simulationmachine"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["09-26-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andrea Gabrielli"]},{"type":"character","attributes":{},"value":["https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["https://kevinykuo.com/"]},{"type":"character","attributes":{},"value":["Kasa AI"]},{"type":"character","attributes":{},"value":["https://kasa.ai/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mario V. Wüthrich"]},{"type":"character","attributes":{},"value":["https://people.math.ethz.ch/~wueth/"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
   
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bibliography.bib","individual-claims-history-simulation-machine_files/bowser-1.9.3/bowser.min.js","individual-claims-history-simulation-machine_files/distill-2.2.21/template.v2.js","individual-claims-history-simulation-machine_files/jquery-1.11.3/jquery.min.js","individual-claims-history-simulation-machine_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .distill-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-  
-  .distill-site-header {
-  
-  }
-  
-  .distill-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .distill-site-header .title {
-    font-size: 18px;
-  }
-  
-  .distill-site-header .logo {
-    padding: 0;
-  }
-  
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative;}
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  </style>
-  
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -1255,420 +931,224 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="individual-claims-history-simulation-machine_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="individual-claims-history-simulation-machine_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="individual-claims-history-simulation-machine_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="individual-claims-history-simulation-machine_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130804330-2"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-130804330-2');
-  </script>
-  <style type="text/css">
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0e4467;
-  }
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="style.css" type="text/css"/>
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"","authors":[]}
+{"title":"simulationmachine: Synthesizing Individual Claims Data","description":"Generate claims data for loss reserving research and backtesting.","authors":[{"author":"Andrea Gabrielli","authorURL":"https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people","affiliation":"RiskLab, ETH Zürich","affiliationURL":"https://risklab.ch/"},{"author":"Kevin Kuo","authorURL":"https://kevinykuo.com/","affiliation":"Kasa AI","affiliationURL":"https://kasa.ai/"},{"author":"Mario V. Wüthrich","authorURL":"https://people.math.ethz.ch/~wueth/","affiliation":"RiskLab, ETH Zürich","affiliationURL":"https://risklab.ch/"}],"publishedDate":"2019-09-26T00:00:00.000-04:00","citationText":"Gabrielli, et al., 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<span class="logo">
-<img src="img/logo-white.png"/>
-</span>
-<a href="index.html" class="title">Kasa AI Blog</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="index.xml">
-<i class="fa fa-rss"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if (category == page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption"></h1>
-<a href="posts/simulation-machine/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 26, 2019</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>simulationmachine: Synthesizing Individual Claims Data</h2>
-<p>Generate claims data for loss reserving research and backtesting.</p>
-</div>
-</a>
-<a href="posts/intro/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 1, 2019</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Introducing Kasa AI</h2>
-<p>Accelerating innovation in insurance analytics through open collaboration.</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>index.utf8</h1>
-
+<h1>simulationmachine: Synthesizing Individual Claims Data</h1>
+<p>Generate claims data for loss reserving research and backtesting.</p>
 </div>
 
 
 <div class="d-article">
+<p>Today we’re excited to announce the <a href="https://github.com/kasaai/simulationmachine">simulationmachine</a> package, based on the paper <em>An Individual Claims History Simulation Machine</em><span class="citation" data-cites="gabrielli2018individual">(Gabrielli and Wüthrich <a href="#ref-gabrielli2018individual">2018</a>)</span>. We created this package for the practitioner or researcher who needs realistic data for testing reserving or claims analytics modeling workflows.</p>
+<p>The package allows you to simulate individual claim characteristics along with their cash flow histories. We first show a quick example before delving into details of the algorithm.</p>
+<h2 id="simulationmachine">simulationmachine</h2>
+<p>You can download simulationmachine from GitHub with</p>
+<pre class="r"><code>
+# install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;kasaai/simulationmachine&quot;)</code></pre>
+<p>First, specify the desired characteristics of the simulation, by scribing a <em>charm</em> (which we’ll use to do some <a href="https://conjuror.kasa.ai"><em>conjuoring</em></a> later!):</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(simulationmachine)
 
+charm &lt;- simulation_machine(
+  num_claims = 50000, 
+  lob_distribution = c(0.25, 0.25, 0.30, 0.20), 
+  inflation = c(0.01, 0.01, 0.01, 0.01), 
+  sd_claim = 0.85, 
+  sd_recovery = 0.75
+)
+charm</code></pre>
+<pre><code>
+A simulation charm for `simulation_machine`
+
+Each record is:
+ - A snapshot of a claim&#39;s incremental paid loss and claim status
+   at a development year.
+
+Specs:
+ - Expected number of claims: 50,000
+ - LOB distribution: 0.25, 0.25, 0.3, 0.2
+ - Inflation: 0.01, 0.01, 0.01, 0.01
+ - SD of claim sizes: 0.85,
+ - SD of recovery sizes: 0.75</code></pre>
+</div>
+<p>The charm encodes the details of the simulation we want to create. In this case, the simulation contains the following:</p>
+<ul>
+<li>Approximately 50,000 claims (note that this is an expected value, as claim incidence is also simulated)</li>
+<li>The distribution among the four lines of business is 25%, 25%, 30%, and 20%</li>
+<li>Inflation is a constant 1% for all lines of business</li>
+<li>Claims are lognormally distributed with a standard deivation of 0.85</li>
+<li>Recoveries are lognormally distributed with a standard deviation of 0.75</li>
+</ul>
+<p>Once we have the specification, we can perform the actual simulation using the <code>conjure()</code> function:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(tidyverse)
+records &lt;- conjure(charm, seed = 100)
+glimpse(records)</code></pre>
+<pre><code>
+Observations: 603,324
+Variables: 11
+$ claim_id          &lt;chr&gt; &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;…
+$ accident_year     &lt;int&gt; 1994, 1994, 1994, 1994, 1994, 1994, 1994,…
+$ development_year  &lt;int&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, …
+$ accident_quarter  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4,…
+$ report_delay      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ lob               &lt;chr&gt; &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;…
+$ cc                &lt;chr&gt; &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;,…
+$ age               &lt;int&gt; 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 6…
+$ injured_part      &lt;chr&gt; &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;,…
+$ paid_loss         &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4913,…
+$ claim_status_open &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,…</code></pre>
+</div>
+<p>In the output data frame, each row corresponds to a snapshot in time of a claim. The number of rows, 603,324, corresponds to 50,277 claims times 12 time steps. At this point, the dataset is ready for use in a claims level exercise. However, if you’re looking for aggregate triangle data, that can be easily done with a few transformations. Say we’re interested in a cumulative paid loss triangle as of calendar year 1999 (so it’ll fit in the margins of this blog post), we can use the following snippet:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+triangle &lt;- records %&gt;% 
+  filter(accident_year + development_year &lt;= 1999) %&gt;% 
+  # aggregate to AY-dev cells
+  group_by(accident_year, development_year) %&gt;% 
+  summarize(paid_loss = sum(paid_loss)) %&gt;% 
+  group_by(accident_year) %&gt;% 
+  # calculate cumulative losses
+  mutate(cumulative_paid_loss = cumsum(paid_loss)) %&gt;% 
+  select(accident_year, development_year, cumulative_paid_loss) %&gt;% 
+  # reshape the data
+  pivot_wider(
+    names_from = &quot;development_year&quot;, 
+    values_from = &quot;cumulative_paid_loss&quot;
+  )
+
+triangle</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">accident_year</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1994</td>
+<td style="text-align: right;">4,252,450</td>
+<td style="text-align: right;">6,669,347</td>
+<td style="text-align: right;">7,852,028</td>
+<td style="text-align: right;">8,372,107</td>
+<td style="text-align: right;">8,682,360</td>
+<td style="text-align: right;">8,875,666</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1995</td>
+<td style="text-align: right;">3,493,776</td>
+<td style="text-align: right;">5,438,160</td>
+<td style="text-align: right;">5,923,379</td>
+<td style="text-align: right;">6,157,112</td>
+<td style="text-align: right;">6,319,793</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1996</td>
+<td style="text-align: right;">4,703,297</td>
+<td style="text-align: right;">7,321,589</td>
+<td style="text-align: right;">8,345,325</td>
+<td style="text-align: right;">8,933,265</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1997</td>
+<td style="text-align: right;">4,797,499</td>
+<td style="text-align: right;">7,796,097</td>
+<td style="text-align: right;">8,996,412</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1998</td>
+<td style="text-align: right;">3,980,551</td>
+<td style="text-align: right;">6,687,173</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1999</td>
+<td style="text-align: right;">3,557,440</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="motivations-technical-details">Motivations &amp; Technical Details</h2>
+<p>The aim of the Simulation Machine<span class="citation" data-cites="gabrielli2018individual">(Gabrielli and Wüthrich <a href="#ref-gabrielli2018individual">2018</a>)</span> is to develop a stochastic simulation machine that generates individual claims histories of non-life insurance claims. Recently, loss reserving research has been very active, leading to many new ideas and techniques to estimate the claims reserves required to cover future payments for claims that have occurred in the past. In particular, there has been a lot of effort put into the development of claims reserving methods based on individual claims histories. However, a main shortcoming in this field of research is that there is no publicly available individual claims history data, as insurance companies are often unwilling or unable to publish their data due to confidentiality reasons. Therefore, there is no possibility to back-test the newly developed claims reserving methods. By developing the algorithm and the simulation package, we hope to provide a common ground for the actuarial community in the form of publicly available data for individual claims reserving.</p>
+<p>Of course, the simulated individual claims histories should be as realistic as possible to reflect a real insurance claims portfolio. Therefore, the simulation machine was calibrated to real experience data graciously provided by the <a href="https://www.suva.ch/en?lang=en">Swiss National Accident Insurance Fund (SUVA)</a>. This dataset consisted of <span class="math inline">\(n \approx 10\)</span> million individual claims that occurred between 1994 and 2005, and for each of these individual claims we had full information of 12 years of claims development as well as of the relevant feature information, which we discuss below.</p>
+<p>Internally, the algorithm consists of two main simulation stages. In the first stage, a portfolio of individual claims characteristics is generated, and each claim contains the following features:</p>
+<ul>
+<li>The line of business (<code>lob</code>), of which there are four</li>
+<li>The claims code (<code>cc</code>), which denotes the labor sector of the claimant, with 51 possible values</li>
+<li>The accident year (<code>accident_year</code>)</li>
+<li>The accident quarter (<code>accident_quarter</code>)</li>
+<li>The age of the injured <code>age</code> (in 5 years age buckets), which can take on values <code>15, 20, ..., 70</code></li>
+<li>The injured body part (<code>injured_part</code>), with 46 possible values</li>
+</ul>
+<!-- Note that for the labels $\{1, \dots, 53\}$ and $\{1, \dots, 99\}$ of the two features claims code and injured body part we have gaps, that is, in total we can simulate from 51 different claims codes and from 46 different injured body parts. -->
+<p>Once the static claim characteristics are generated, we use them in the second simulation stage to generate:</p>
+<ul>
+<li>The (incremental) individual claims cash flow, <code>paid_loss</code>, for <code>development_year = 0, ..., 11</code></li>
+<li>The claim status process <code>claim_status_open</code> (again for <code>development_year = 0, ..., 11</code>) which is an indicator variable denoting whether the considered claim is open at the end of the accounting year <code>accident_year + development_year</code></li>
+</ul>
+<p>We remark that we only consider yearly payments, that is, multiple payments and recovery payments within each calendar year are aggregated into a single annual payment. This single annual payment can either be positive or negative, depending whether we have higher claim payments or higher recovery payments in that year. The sum over all yearly payments of any given claim is constrained to be nonnegative because recoveries cannot exceed payments.</p>
+<p>The simulation of the cash flow process and the claim status process is based on neural networks to incorporate individual claims feature information. In recent years, neural networks have proved to be very powerful tools in classification and regression problems. Their drawbacks are that they are rather difficult to calibrate and, once calibrated, they act almost like black boxes between inputs and outputs. Of course, this is a major disadvantage in interpretation and getting deeper insight. However, the missing interpretation is not necessarily a disadvantage in this simulation machine because it implies, in back-testing other methods, that the true data generating mechanism cannot easily be guessed.</p>
+<p>Summarizing, simulationmachine, with the algorithm it implements, provides a way to generate a synthetic insurance dataset consisting of individual claims. These claims contain a rich set of feature information, along with time series of cash flows and claims status indicators. In particular, we can simulate claims from 12 different accident years, and for every individual claim we are provided with 12 years of claims development.</p>
+<h2 id="consistent-interfaces-for-simulation">Consistent Interfaces for Simulation</h2>
+<p>The workflow of generating data for research and backtesting is shared by researchers and practitioners alike. We believe that it is worthwhile to optimize this workflow by streamlining the process of generating data using different simulators. The simulationmachine package implements the <a href="https://conjuror.kasa.ai/">conjuror</a> interface, which includes a set of conventions for simulator package authors to consider. These conventions are currently under active development, and we encourage you to participate in shaping them.</p>
+<h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
+<p>We would like to thank Ryan Thomas, Hadrien Dykiel, and Frankie Logan for their helpful comments.</p>
+<div id="refs" class="references">
+<div id="ref-gabrielli2018individual">
+<p>Gabrielli, Andrea, and Mario V. Wüthrich. 2018. “An Individual Claims History Simulation Machine.” <em>Risks</em> 6 (2). Multidisciplinary Digital Publishing Institute: 29. <a href="https://doi.org/10.3390/risks6020029">https://doi.org/10.3390/risks6020029</a>.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1676,11 +1156,33 @@ function init_posts_list() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{gabrielli2018individual,
+  title={An individual claims history simulation machine},
+  author={Gabrielli, Andrea and W{\"u}thrich, Mario V.},
+  journal={Risks},
+  volume={6},
+  number={2},
+  pages={29},
+  year={2018},
+  publisher={Multidisciplinary Digital Publishing Institute},
+  url = {https://doi.org/10.3390/risks6020029}
+}
+</script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

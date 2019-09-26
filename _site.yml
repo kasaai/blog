@@ -19,4 +19,4 @@ base_url: https://blog.kasa.ai
 google_analytics: "UA-130804330-2"
 collections:
   posts:
-    share: [twitter, linkedin]
+    citations: false

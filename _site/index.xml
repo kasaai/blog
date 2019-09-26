@@ -7,7 +7,17 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>simulationmachine: Synthesizing Individual Claims Data</title>
+      <dc:creator>Andrea Gabrielli</dc:creator>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <dc:creator>Mario V. Wüthrich</dc:creator>
+      <link>https://blog.kasa.ai/posts/simulation-machine</link>
+      <description>Generate claims data for loss reserving research and backtesting.</description>
+      <guid>https://blog.kasa.ai/posts/simulation-machine</guid>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing Kasa AI</title>
       <dc:creator>Kevin Kuo</dc:creator>

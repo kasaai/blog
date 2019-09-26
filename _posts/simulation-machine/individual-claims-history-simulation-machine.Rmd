@@ -17,7 +17,7 @@ authors:
     affiliation_url: https://risklab.ch/
 slug: simulationmachine
 bibliography: bibliography.bib
-date: 09-25-2019
+date: 09-26-2019
 output:
   distill::distill_article:
     self_contained: false

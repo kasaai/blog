@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/",
+    "title": "Towards Explainability of Machine Learning Models in Insurance Pricing",
+    "description": "Peeking into the black box --- an actuarial perspective.",
+    "author": [
+      {
+        "name": "Daniel Lupton",
+        "url": {}
+      },
+      {
+        "name": "Kevin Kuo",
+        "url": "https://kevinykuo.com/"
+      }
+    ],
+    "date": "2020-07-31",
+    "categories": [],
+    "preview": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/fi-plot.png",
+    "last_modified": "2020-07-30T09:15:44-07:00",
+    "input_file": "towards-explainability-of-machine-learning-models-in-insurance-pricing.utf8.md",
+    "preview_width": 2970,
+    "preview_height": 2041
+  },
+  {
     "path": "posts/simulation-machine/",
     "title": "simulationmachine: Synthesizing Individual Claims Data",
     "description": "Generate claims data for loss reserving research and backtesting.",
@@ -20,7 +42,8 @@
     "date": "2019-09-26",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-09-26T02:00:35-04:00"
+    "last_modified": "2020-07-15T00:40:17-07:00",
+    "input_file": {}
   },
   {
     "path": "posts/intro/",
@@ -35,6 +58,7 @@
     "date": "2019-04-01",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-08-23T14:36:42-04:00"
+    "last_modified": "2020-07-15T00:40:17-07:00",
+    "input_file": {}
   }
 ]

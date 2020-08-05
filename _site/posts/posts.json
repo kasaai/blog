@@ -1,23 +1,5 @@
 [
   {
-    "path": "posts/2020-08-05-cellar-open-datasets-in-insurance/",
-    "title": "Cellar: Open Datasets in Insurance",
-    "description": "Improving discoverability and access of publicly available datasets.",
-    "author": [
-      {
-        "name": "Kevin Kuo",
-        "url": {}
-      }
-    ],
-    "date": "2020-08-10",
-    "categories": [],
-    "preview": "posts/2020-08-05-cellar-open-datasets-in-insurance/images/data_dictionary.png",
-    "last_modified": "2020-08-05T16:33:10-07:00",
-    "input_file": "cellar-open-datasets-in-insurance.utf8.md",
-    "preview_width": 1790,
-    "preview_height": 826
-  },
-  {
     "path": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/",
     "title": "Towards Explainability of Machine Learning Models in Insurance Pricing",
     "description": "Peeking into the black box -- an actuarial perspective.",
@@ -33,9 +15,9 @@
     ],
     "date": "2020-08-10",
     "categories": [],
-    "preview": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/fi-plot.png",
-    "last_modified": "2020-08-05T16:33:55-07:00",
-    "input_file": "towards-explainability-of-machine-learning-models-in-insurance-pricing.utf8.md",
+    "preview": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/breakdown-plot.png",
+    "last_modified": "2020-08-05T16:45:14-07:00",
+    "input_file": {},
     "preview_width": 2970,
     "preview_height": 2041
   },
@@ -52,10 +34,28 @@
     "date": "2020-08-10",
     "categories": [],
     "preview": "posts/2020-08-04-synthesizing-realistic-data-for-rd/images/ctgan.png",
-    "last_modified": "2020-08-05T16:34:02-07:00",
-    "input_file": "synthesizing-realistic-data-for-rd.utf8.md",
+    "last_modified": "2020-08-05T16:42:46-07:00",
+    "input_file": {},
     "preview_width": 1000,
     "preview_height": 322
+  },
+  {
+    "path": "posts/2020-08-05-cellar-open-datasets-in-insurance/",
+    "title": "Cellar: Open Datasets in Insurance",
+    "description": "Improving discoverability and access of publicly available datasets.",
+    "author": [
+      {
+        "name": "Kevin Kuo",
+        "url": {}
+      }
+    ],
+    "date": "2020-08-10",
+    "categories": [],
+    "preview": "posts/2020-08-05-cellar-open-datasets-in-insurance/images/dataset_description.png",
+    "last_modified": "2020-08-05T16:47:35-07:00",
+    "input_file": "cellar-open-datasets-in-insurance.utf8.md",
+    "preview_width": 1218,
+    "preview_height": 632
   },
   {
     "path": "posts/simulation-machine/",

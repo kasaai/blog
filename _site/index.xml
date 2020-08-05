@@ -9,15 +9,6 @@
     <generator>Distill</generator>
     <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Cellar: Open Datasets in Insurance</title>
-      <dc:creator>Kevin Kuo</dc:creator>
-      <link>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</link>
-      <description>Improving discoverability and access of publicly available datasets.</description>
-      <guid>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</guid>
-      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance/images/data_dictionary.png" medium="image" type="image/png" width="1790" height="826"/>
-    </item>
-    <item>
       <title>Towards Explainability of Machine Learning Models in Insurance Pricing</title>
       <dc:creator>Daniel Lupton</dc:creator>
       <dc:creator>Kevin Kuo</dc:creator>
@@ -25,7 +16,7 @@
       <description>Peeking into the black box -- an actuarial perspective.</description>
       <guid>https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing</guid>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/fi-plot.png" medium="image" type="image/png" width="2970" height="2041"/>
+      <media:content url="https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/breakdown-plot.png" medium="image" type="image/png" width="2970" height="2041"/>
     </item>
     <item>
       <title>Synthesizing Realistic Data for R&amp;D</title>
@@ -35,6 +26,15 @@
       <guid>https://blog.kasa.ai/posts/2020-08-04-synthesizing-realistic-data-for-rd</guid>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       <media:content url="https://blog.kasa.ai/posts/2020-08-04-synthesizing-realistic-data-for-rd/images/ctgan.png" medium="image" type="image/png" width="1000" height="322"/>
+    </item>
+    <item>
+      <title>Cellar: Open Datasets in Insurance</title>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <link>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</link>
+      <description>Improving discoverability and access of publicly available datasets.</description>
+      <guid>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</guid>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance/images/dataset_description.png" medium="image" type="image/png" width="1218" height="632"/>
     </item>
     <item>
       <title>simulationmachine: Synthesizing Individual Claims Data</title>

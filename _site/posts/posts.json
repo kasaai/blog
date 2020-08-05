@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2020-08-04-synthesizing-realistic-data-for-rd/",
+    "title": "Synthesizing Realistic Data for R&D",
+    "description": "Fake it till you make it---from fancy wines to insurance datasets.",
+    "author": [
+      {
+        "name": "Kevin Kuo",
+        "url": {}
+      }
+    ],
+    "date": "2020-08-04",
+    "categories": [],
+    "preview": "posts/2020-08-04-synthesizing-realistic-data-for-rd/images/ctgan.png",
+    "last_modified": "2020-08-04T19:23:50-07:00",
+    "input_file": "synthesizing-realistic-data-for-rd.utf8.md",
+    "preview_width": 1000,
+    "preview_height": 322
+  },
+  {
     "path": "posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/",
     "title": "Towards Explainability of Machine Learning Models in Insurance Pricing",
     "description": "Peeking into the black box --- an actuarial perspective.",

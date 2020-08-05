@@ -7,7 +7,16 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Synthesizing Realistic Data for R&amp;D</title>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <link>https://blog.kasa.ai/posts/2020-08-04-synthesizing-realistic-data-for-rd</link>
+      <description>Fake it till you make it---from fancy wines to insurance datasets.</description>
+      <guid>https://blog.kasa.ai/posts/2020-08-04-synthesizing-realistic-data-for-rd</guid>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://blog.kasa.ai/posts/2020-08-04-synthesizing-realistic-data-for-rd/images/ctgan.png" medium="image" type="image/png" width="1000" height="322"/>
+    </item>
     <item>
       <title>Towards Explainability of Machine Learning Models in Insurance Pricing</title>
       <dc:creator>Daniel Lupton</dc:creator>

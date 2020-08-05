@@ -7,7 +7,16 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Cellar: Open Datasets in Insurance</title>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <link>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</link>
+      <description>Improving discoverability and access of publicly available datasets.</description>
+      <guid>https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance</guid>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://blog.kasa.ai/posts/2020-08-05-cellar-open-datasets-in-insurance/images/data_dictionary.png" medium="image" type="image/png" width="1790" height="826"/>
+    </item>
     <item>
       <title>Towards Explainability of Machine Learning Models in Insurance Pricing</title>
       <dc:creator>Daniel Lupton</dc:creator>

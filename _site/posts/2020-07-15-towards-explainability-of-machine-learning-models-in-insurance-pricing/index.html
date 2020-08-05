@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-07-31"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-07-31"/>
+<meta property="article:published" itemprop="datePublished" content="2020-08-07"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-08-07"/>
 <meta name="article:author" content="Daniel Lupton"/>
 <meta name="article:author" content="Kevin Kuo"/>
 
@@ -58,7 +58,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Towards Explainability of Machine Learning Models in Insurance Pricing"]},{"type":"character","attributes":{},"value":["Peeking into the black box --- an actuarial perspective."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Daniel Lupton"]},{"type":"character","attributes":{},"value":["Taylor & Mulder"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","url"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio and Kasa AI"]},{"type":"character","attributes":{},"value":["https://kevinykuo.com/"]}]}]},{"type":"character","attributes":{},"value":["07-31-2020"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Towards Explainability of Machine Learning Models in Insurance Pricing"]},{"type":"character","attributes":{},"value":["Peeking into the black box --- an actuarial perspective."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Daniel Lupton"]},{"type":"character","attributes":{},"value":["Taylor & Mulder"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio and Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["08-07-2020"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1317,7 +1317,7 @@ gtag('config', 'UA-130804330-2');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Towards Explainability of Machine Learning Models in Insurance Pricing","description":"Peeking into the black box --- an actuarial perspective.","authors":[{"author":"Daniel Lupton","authorURL":"#","affiliation":"Taylor & Mulder","affiliationURL":"#"},{"author":"Kevin Kuo","authorURL":"https://kevinykuo.com/","affiliation":"RStudio and Kasa AI","affiliationURL":"#"}],"publishedDate":"2020-07-31T00:00:00.000-07:00","citationText":"Lupton & Kuo, 2020"}
+{"title":"Towards Explainability of Machine Learning Models in Insurance Pricing","description":"Peeking into the black box --- an actuarial perspective.","authors":[{"author":"Daniel Lupton","authorURL":"#","affiliation":"Taylor & Mulder","affiliationURL":"#"},{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio and Kasa AI","affiliationURL":"#"}],"publishedDate":"2020-08-07T00:00:00.000-07:00","citationText":"Lupton & Kuo, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1352,9 +1352,9 @@ gtag('config', 'UA-130804330-2');
 <div class="d-byline">
   Daniel Lupton  (Taylor &amp; Mulder)
   
-,   Kevin Kuo <a href="https://kevinykuo.com/" class="uri">https://kevinykuo.com/</a> (RStudio and Kasa AI)
+,   Kevin Kuo  (RStudio and Kasa AI)
   
-<br/>07-31-2020
+<br/>08-07-2020
 </div>
 
 <div class="d-article">
@@ -1407,7 +1407,7 @@ Figure 2: Partial dependence plot and distribution of the Vehicle Age variable.
 </p>
 </div>
 </div>
-<p>As the <em>Vehicle Age</em> variable increases, we expect that, on average, our model will predict a lower loss cost. Is it appropriate to consider the distribution of the variable when considering its PDP, as sometimes unexpected behavior can appear near values where the variable has thin data.</p>
+<p>As the <em>Vehicle Age</em> variable increases, we expect that, on average, our model will predict a lower loss cost. It is appropriate to consider the distribution of the variable when considering its PDP, as sometimes unexpected behavior can appear near values where the variable has thin data.</p>
 <h3 id="variable-attribution">Variable Attribution</h3>
 <p>This method answers the common question: what factors most contribute to the rate a policyholder is being charged? For example, a young driver might get a higher auto insurance premium, but the car on the policy might be associated with comparatively low pure premium. How do these factors combine to generate the policyholder’s rate?</p>
 <p>This technique can be used to verify that predictions make sense, and it can be used to investigate problematic predictions. Technically, it works by looking at how the model prediction changes as each variable is introduced. So we start with the average prediction (i.e., the model intercept), and then look at how the model changes as each variable is moved from its average, or expected, value to the specific value for a given policyholder.</p>

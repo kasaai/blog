@@ -140,7 +140,7 @@ knitr::include_graphics("images/pdp-plot.png")
 ```
 
 As the *Vehicle Age* variable increases, we expect that, on average, our model
-will predict a lower loss cost. Is it appropriate to consider the distribution
+will predict a lower loss cost. It is appropriate to consider the distribution
 of the variable when considering its PDP, as sometimes unexpected behavior
 can appear near values where the variable has thin data.
 

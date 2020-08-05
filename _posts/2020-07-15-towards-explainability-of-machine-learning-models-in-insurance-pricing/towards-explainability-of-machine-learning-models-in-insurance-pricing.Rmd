@@ -1,7 +1,7 @@
 ---
 title: "Towards Explainability of Machine Learning Models in Insurance Pricing"
 description: |
-  Peeking into the black box --- an actuarial perspective.
+  Peeking into the black box -- an actuarial perspective.
 author:
   - name: Daniel Lupton
     affiliation: Taylor & Mulder

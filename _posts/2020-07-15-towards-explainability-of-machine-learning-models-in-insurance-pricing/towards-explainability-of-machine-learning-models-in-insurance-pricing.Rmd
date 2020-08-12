@@ -110,8 +110,6 @@ importance plots use a clever workaround: instead of removing a variable entirel
 and re-fitting, we simply permute the values of the variable, i.e., we randomly
 rearrange the variable’s values and we see how well the model fits.
 
-Mechanically, this is what it looks like:
-
 ```{r, eval=TRUE, echo=FALSE, layout="l-body", fig.cap = "Losses on testing dataset when each predictor's values are randomly permuted. Red dashed line indicates model without variable permutation."}
 knitr::include_graphics("images/fi-plot.png")
 ```
@@ -132,8 +130,6 @@ all other variables. For example, we might consider the average predicted pure
 premium at different vehicle ages, averaged over all other modeled variables. 
 This yields a curve reflecting how the pure premium changes on average as the 
 vehicle age changes.
-
-Mechanically, it looks like this:
 
 ```{r, eval=TRUE, echo=FALSE, layout="l-body", fig.cap = "Partial dependence plot and distribution of the Vehicle Age variable."}
 knitr::include_graphics("images/pdp-plot.png")

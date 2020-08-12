@@ -1007,7 +1007,6 @@
 <h3 id="permutation-feature-importance">Permutation Feature Importance</h3>
 <p>This technique answers the question, “What are the most important predictors in the model?”, or, put another way, which predictors are contributing most to the accuracy of predictions?</p>
 <p>One way to figure out how much a variable contributes to predictive accuracy would be to compare nested models including and excluding the variable and checking which model performs better on average. However, with complicated models and lots of data, this could be a computationally expensive process. Instead, variable importance plots use a clever workaround: instead of removing a variable entirely and re-fitting, we simply permute the values of the variable, i.e., we randomly rearrange the variable’s values and we see how well the model fits.</p>
-<p>Mechanically, this is what it looks like:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-1"></span>
 <img src="images/fi-plot.png" alt="Losses on testing dataset when each predictor's values are randomly permuted. Red dashed line indicates model without variable permutation." width="1485" />
@@ -1020,7 +1019,6 @@ Figure 1: Losses on testing dataset when each predictor’s values are randomly 
 <h3 id="partial-dependence-plot-pdp">Partial Dependence Plot (PDP)</h3>
 <p>This technique answers the question, “How do changes to the inputs affect the output on average?”</p>
 <p>For highly non-linear models, it could be important to verify that the relationship between a rating variable and pure premium (for instance) makes sense. This technique can be used to review those relationships. This technique works by considering the model’s prediction at a certain level of a variable averaged over all other variables. For example, we might consider the average predicted pure premium at different vehicle ages, averaged over all other modeled variables. This yields a curve reflecting how the pure premium changes on average as the vehicle age changes.</p>
-<p>Mechanically, it looks like this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-2"></span>
 <img src="images/pdp-plot.png" alt="Partial dependence plot and distribution of the Vehicle Age variable." width="1485" />

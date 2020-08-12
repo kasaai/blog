@@ -5,8 +5,10 @@ description: |
 author:
   - name: Kevin Kuo
     affiliation: RStudio and Kasa AI 
-date: 08-10-2020
+date: 08-13-2020
 preview: images/dataset_description.png
+draft: true
+slug: cellar
 output:
   distill::distill_article:
     self_contained: false

@@ -7,9 +7,10 @@ author:
     affiliation: Taylor & Mulder
   - name: Kevin Kuo
     affiliation: RStudio and Kasa AI
-date: 08-10-2020
+date: 08-12-2020
 bibliography: bibliography.bib
 preview: images/breakdown-plot.png
+slug: explain-ml-pricing
 output:
   distill::distill_article:
     self_contained: false

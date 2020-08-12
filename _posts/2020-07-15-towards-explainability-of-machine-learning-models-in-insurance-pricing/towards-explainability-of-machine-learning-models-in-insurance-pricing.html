@@ -19,369 +19,43 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Kasa AI Blog: About</title>
+  <title>Towards Explainability of Machine Learning Models in Insurance Pricing</title>
 
-  <meta property="description" itemprop="description" content="This is the official blog of [Kasa AI](https://kasa.ai)."/>
+  <meta property="description" itemprop="description" content="Peeking into the black box -- an actuarial perspective."/>
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-08-12"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-08-12"/>
+  <meta name="article:author" content="Daniel Lupton"/>
+  <meta name="article:author" content="Kevin Kuo"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Kasa AI Blog: About"/>
+  <meta property="og:title" content="Towards Explainability of Machine Learning Models in Insurance Pricing"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="This is the official blog of [Kasa AI](https://kasa.ai)."/>
+  <meta property="og:description" content="Peeking into the black box -- an actuarial perspective."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Kasa AI Blog"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Kasa AI Blog: About"/>
-  <meta property="twitter:description" content="This is the official blog of [Kasa AI](https://kasa.ai)."/>
+  <meta property="twitter:title" content="Towards Explainability of Machine Learning Models in Insurance Pricing"/>
+  <meta property="twitter:description" content="Peeking into the black box -- an actuarial perspective."/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Towards explainability of machine learning models in insurance pricing;citation_publication_date=2020;citation_author=Kevin Kuo;citation_author=Daniel Lupton"/>
+  <meta name="citation_reference" content="citation_title=Peeking into the black box: An actuarial case study for interpretable machine learning;citation_publication_date=2020;citation_author=Christian Lorentzen;citation_author=Michael Mayer"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About"]},{"type":"character","attributes":{},"value":["This is the official blog of [Kasa AI](https://kasa.ai)."]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","preview","slug","output"]}},"value":[{"type":"character","attributes":{},"value":["Towards Explainability of Machine Learning Models in Insurance Pricing"]},{"type":"character","attributes":{},"value":["Peeking into the black box -- an actuarial perspective.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Daniel Lupton"]},{"type":"character","attributes":{},"value":["Taylor & Mulder"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio and Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["08-12-2020"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["images/breakdown-plot.png"]},{"type":"character","attributes":{},"value":["explain-ml-pricing"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bibliography.bib","images/breakdown-plot.png","images/fi-plot.png","images/pdp-plot.png","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/bowser-1.9.3/bowser.min.js","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/distill-2.2.21/template.v2.js","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/header-attrs-2.3.2/header-attrs.js","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/header-attrs-2.3/header-attrs.js","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/jquery-1.11.3/jquery.min.js","towards-explainability-of-machine-learning-models-in-insurance-pricing_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative;}
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  </style>
-
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1267,28 +941,14 @@
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="towards-explainability-of-machine-learning-models-in-insurance-pricing_files/header-attrs-2.3/header-attrs.js"></script>
+  <script src="towards-explainability-of-machine-learning-models-in-insurance-pricing_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="towards-explainability-of-machine-learning-models-in-insurance-pricing_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="towards-explainability-of-machine-learning-models-in-insurance-pricing_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="towards-explainability-of-machine-learning-models-in-insurance-pricing_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130804330-2"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-130804330-2');
-  </script>
-  <style type="text/css">
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0e4467;
-  }
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="style.css" type="text/css"/>
 
 </head>
 
@@ -1297,41 +957,101 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About","description":"This is the official blog of [Kasa AI](https://kasa.ai).","authors":[]}
+{"title":"Towards Explainability of Machine Learning Models in Insurance Pricing","description":"Peeking into the black box -- an actuarial perspective.","authors":[{"author":"Daniel Lupton","authorURL":"#","affiliation":"Taylor & Mulder","affiliationURL":"#"},{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio and Kasa AI","affiliationURL":"#"}],"publishedDate":"2020-08-12T00:00:00.000-07:00","citationText":"Lupton & Kuo, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<span class="logo">
-<img src="img/logo-white.png"/>
-</span>
-<a href="index.html" class="title">Kasa AI Blog</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="index.xml">
-<i class="fa fa-rss" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About</h1>
-<p><p>This is the official blog of <a href="https://kasa.ai">Kasa AI</a>.</p></p>
+<h1>Towards Explainability of Machine Learning Models in Insurance Pricing</h1>
+<p><p>Peeking into the black box – an actuarial perspective.</p></p>
 </div>
 
+<div class="d-byline">
+  Daniel Lupton  (Taylor &amp; Mulder)
+  
+,   Kevin Kuo  (RStudio and Kasa AI)
+  
+<br/>08-12-2020
+</div>
 
 <div class="d-article">
-
+<p>This blog post is a companion piece to the paper of the same title<span class="citation" data-cites="kuo2020towards">(Kuo and Lupton <a href="#ref-kuo2020towards" role="doc-biblioref">2020</a>)</span>, which was recently accepted for publication in <a href="https://www.variancejournal.org/">Variance</a>. In the paper, we discuss details about the need for actuaries to be able to explain machine learning (ML) models. This post provides an accessible summary of the paper and a few code snippets to show how one can get started with model explanation techniques.</p>
+<h2 id="motivation">Motivation</h2>
+<p>First, some background: why is it important to be able to explain ML models? There are a few obvious reasons:</p>
+<ol type="1">
+<li>To comply with relevant <a href="http://www.actuarialstandardsboard.org/standards-of-practice/">Actuarial Standards of Practice</a> or the relevant standards for one’s practicing jurisdiction. There are a lot of standards that pose challenges for “black box” models, so it’s often necessary to have some deep understanding about how a model is working.</li>
+<li>To communicate results to relevant stakeholders. This may include regulators, colleagues, bosses, auditors, consultants, agents, or even customers. Actuaries don’t operate in a vacuum, so it’s important to make sure you can get the buy-in and support of others.</li>
+<li>To be a responsible actuary! If you want to use a model, you should have some understanding of what it does and whether or not it is working. The methods we explore here are powerful tools for gaining insight into the effects of your model.</li>
+</ol>
+<h2 id="interpretability">Interpretability</h2>
+<p>Before we get started, there’s one other question we need to tackle: what does it mean for a model to be <em>interpretable</em>?</p>
+<p>The answer really depends on context and audience. Often the inner workings of ML models are not mysterious — the algorithms that generate answers are well-understood, much the same way GLMs are considered to be well-understood. Likewise, it’s worth noting that both GLMs and ML models can pose challenges for interpretation when they become complex.</p>
+<p>What qualifies as <em>interpretable</em>, then, really depends on the person asking the questions, the model itself, and the kinds of questions being asked. A seasoned ML or statistics expert will have a very different sense of interpretability than a relative newcomer just by virtue of having deeper understanding of the mechanics of the models in question.</p>
+<p>That said, it is possible to sidestep this issue to some extent. The techniques in this paper focus on model-agnostic interpretation strategies. These techniques allow the user to gain a rich understanding of the effects of a model without relying on deep knowledge of the model’s mathematical properties or structure. This broad approach to interpretability allows those unfamiliar with the specific model to gain understanding of how a model is generating predictions and whether those predictions are reasonable.</p>
+<h2 id="questions-to-answer">Questions to Answer</h2>
+<p>The techniques we introduce here will help to answer three main questions. We pose these questions in the context of ratemaking, though similar questions might be asked in other domains of application. There are many ways to answer these kinds of questions, as we discussed above, but this post will focus on a more limited toolbox of powerful techniques.</p>
+<p>The questions and our proposed answers are as follows:</p>
+<ol type="1">
+<li>What are the most important predictors in the model? <em>Variable importance plots.</em></li>
+<li>How do changes to the inputs affect the output on average? <em>Partial dependence plots.</em></li>
+<li>For a particular policyholder, which of their characteristics are contributing to the rate they’re being charged (and how much)? <em>Variable attribution plots.</em></li>
+</ol>
+<p>We emphasize that each technique outlined here is not the only way to do things. In fact, they are the simplest starting points with certain drawbacks, and variations and improvements have been built upon them (see the paper for references). You can think of these as the OG approaches.</p>
+<h2 id="examples">Examples</h2>
+<p>Let’s take a look at examples of these Q&amp;As. The working example we consider is a personal auto pure premium model based on actual data from Brazil (more specifically, a neural network, though the model explanation techniques are agnostic with respect to the type of model). For those who would like to follow along with code, check out the <a href="https://github.com/kasaai/explain-ml-demo">GitHub repo</a>.</p>
+<h3 id="permutation-feature-importance">Permutation Feature Importance</h3>
+<p>This technique answers the question, “What are the most important predictors in the model?”, or, put another way, which predictors are contributing most to the accuracy of predictions?</p>
+<p>One way to figure out how much a variable contributes to predictive accuracy would be to compare nested models including and excluding the variable and checking which model performs better on average. However, with complicated models and lots of data, this could be a computationally expensive process. Instead, variable importance plots use a clever workaround: instead of removing a variable entirely and re-fitting, we simply permute the values of the variable, i.e., we randomly rearrange the variable’s values and we see how well the model fits.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="images/fi-plot.png" alt="Losses on testing dataset when each predictor's values are randomly permuted. Red dashed line indicates model without variable permutation." width="1485" />
+<p class="caption">
+Figure 1: Losses on testing dataset when each predictor’s values are randomly permuted. Red dashed line indicates model without variable permutation.
+</p>
+</div>
+</div>
+<p>Here, we see that <em>Make</em> contributes most to the accuracy of the model while <em>Sex</em> contributes the least.</p>
+<h3 id="partial-dependence-plot-pdp">Partial Dependence Plot (PDP)</h3>
+<p>This technique answers the question, “How do changes to the inputs affect the output on average?”</p>
+<p>For highly non-linear models, it could be important to verify that the relationship between a rating variable and pure premium (for instance) makes sense. This technique can be used to review those relationships. This technique works by considering the model’s prediction at a certain level of a variable averaged over all other variables. For example, we might consider the average predicted pure premium at different vehicle ages, averaged over all other modeled variables. This yields a curve reflecting how the pure premium changes on average as the vehicle age changes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/pdp-plot.png" alt="Partial dependence plot and distribution of the Vehicle Age variable." width="1485" />
+<p class="caption">
+Figure 2: Partial dependence plot and distribution of the Vehicle Age variable.
+</p>
+</div>
+</div>
+<p>As the <em>Vehicle Age</em> variable increases, we expect that, on average, our model will predict a lower loss cost. It is appropriate to consider the distribution of the variable when considering its PDP, as sometimes unexpected behavior can appear near values where the variable has thin data.</p>
+<h3 id="variable-attribution">Variable Attribution</h3>
+<p>This method answers the common question: what factors most contribute to the rate a policyholder is being charged? For example, a young driver might get a higher auto insurance premium, but the car on the policy might be associated with comparatively low pure premium. How do these factors combine to generate the policyholder’s rate?</p>
+<p>This technique can be used to verify that predictions make sense, and it can be used to investigate problematic predictions. Technically, it works by looking at how the model prediction changes as each variable is introduced. So we start with the average prediction (i.e., the model intercept), and then look at how the model changes as each variable is moved from its average, or expected, value to the specific value for a given policyholder.</p>
+<p>The verbal description is a little confusing, but it is easy to understand with an example:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="images/breakdown-plot.png" alt="Variable attribution plot for an example policy." width="1485" />
+<p class="caption">
+Figure 3: Variable attribution plot for an example policy.
+</p>
+</div>
+</div>
+<p>In this case, starting with a model average prediction of R$735 across the entire dataset, our policy has an expected decrease in loss cost of R$141 due to the vehicle being a Ford, an expected increase in loss cost of R$120 due to the vehicle being relatively new (<code>vehicle_age == 1</code>), and so on, until we arrive at the predicted loss cost of R$847.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post, we explored three powerful, model-agnostic techniques for understanding, troubleshooting, and communicating model results. It is worth noting that the techniques explored in this post are only one version of a subset of available techniques, and the paper provides references to alternatives.</p>
+<p>Finally, we would like to point out a recent tutorial<span class="citation" data-cites="lorentzen2020peeking">(Lorentzen and Mayer <a href="#ref-lorentzen2020peeking" role="doc-biblioref">2020</a>)</span> made available by others, and encourage academics and practitioners alike explore this very interesting topic!</p>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-kuo2020towards">
+<p>Kuo, Kevin, and Daniel Lupton. 2020. “Towards Explainability of Machine Learning Models in Insurance Pricing.” <em>arXiv Preprint arXiv:2003.10674</em>.</p>
+</div>
+<div id="ref-lorentzen2020peeking">
+<p>Lorentzen, Christian, and Michael Mayer. 2020. “Peeking into the Black Box: An Actuarial Case Study for Interpretable Machine Learning.” <em>Available at SSRN</em>.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1344,6 +1064,21 @@
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{kuo2020towards,
+  title={Towards Explainability of Machine Learning Models in Insurance Pricing},
+  author={Kuo, Kevin and Lupton, Daniel},
+  journal={arXiv preprint arXiv:2003.10674},
+  year={2020}
+}
+
+@article{lorentzen2020peeking,
+  title={Peeking into the Black Box: An Actuarial Case Study for Interpretable Machine Learning},
+  author={Lorentzen, Christian and Mayer, Michael},
+  journal={Available at SSRN},
+  year={2020}
+}
+</script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

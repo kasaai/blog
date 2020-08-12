@@ -93,7 +93,7 @@ can think of these as the OG approaches.
 ## Examples
 
 Let's take a look at examples of these Q&As. The working example we consider is a
-personal auto pure premium model (more specifically, a neural network, though the
+personal auto pure premium model based on actual data from Brazil (more specifically, a neural network, though the
 model explanation techniques are agnostic with respect to the type of model). For 
 those who would like to follow along with code, check out the [GitHub repo](https://github.com/kasaai/explain-ml-demo).
 

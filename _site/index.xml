@@ -12,11 +12,11 @@
       <title>Towards Explainability of Machine Learning Models in Insurance Pricing</title>
       <dc:creator>Daniel Lupton</dc:creator>
       <dc:creator>Kevin Kuo</dc:creator>
-      <link>https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing</link>
+      <link>https://blog.kasa.ai/posts/explain-ml-pricing</link>
       <description>Peeking into the black box -- an actuarial perspective.</description>
-      <guid>https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing</guid>
+      <guid>https://blog.kasa.ai/posts/explain-ml-pricing</guid>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://blog.kasa.ai/posts/2020-07-15-towards-explainability-of-machine-learning-models-in-insurance-pricing/images/breakdown-plot.png" medium="image" type="image/png" width="2970" height="2041"/>
+      <media:content url="https://blog.kasa.ai/posts/explain-ml-pricing/images/breakdown-plot.png" medium="image" type="image/png" width="2970" height="2041"/>
     </item>
     <item>
       <title>simulationmachine: Synthesizing Individual Claims Data</title>

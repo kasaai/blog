@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/cellar/",
+    "title": "Cellar: Open Datasets in Insurance",
+    "description": "Improving discoverability and access of publicly available datasets.",
+    "author": [
+      {
+        "name": "Kevin Kuo",
+        "url": {}
+      }
+    ],
+    "date": "2020-08-13",
+    "categories": [],
+    "preview": "posts/cellar/images/dataset_description.png",
+    "last_modified": "2020-08-13T09:24:54-07:00",
+    "input_file": {},
+    "preview_width": 1218,
+    "preview_height": 632
+  },
+  {
     "path": "posts/explain-ml-pricing/",
     "title": "Towards Explainability of Machine Learning Models in Insurance Pricing",
     "description": "Peeking into the black box -- an actuarial perspective.",
@@ -16,7 +34,7 @@
     "date": "2020-08-12",
     "categories": [],
     "preview": "posts/explain-ml-pricing/images/breakdown-plot.png",
-    "last_modified": "2020-08-12T12:47:50-07:00",
+    "last_modified": "2020-08-13T09:23:45-07:00",
     "input_file": {},
     "preview_width": 2970,
     "preview_height": 2041

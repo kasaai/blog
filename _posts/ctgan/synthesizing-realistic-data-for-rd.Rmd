@@ -8,7 +8,6 @@ author:
 date: 08-14-2020
 bibliography: bibliography.bib
 preview: images/ctgan.png
-draft: true
 slug: ctgan
 output:
   distill::distill_article:
@@ -30,7 +29,7 @@ repo](https://github.com/kasaai/ctgan) which has instructions on getting started
 # Motivation 
 
 Insurance datasets appropriate for research and software prototyping are often
-difficult to find or don’t exist at all in the public domain. [Cellar](https://cellar.kasa.ai/) attempts to
+difficult to find or don’t exist at all in the public domain. [Cellar](https://blog.kasa.ai/posts/cellar/) attempts to
 solve the discoverability problem, and [simulationmachine](https://blog.kasa.ai/posts/simulation-machine/) provides a way to generate 
 data for a very specific application (P&C reserving). By making CTGAN available to R users and 
 performing initial explorations of insurance use cases, we hope to enable another
@@ -110,15 +109,17 @@ knitr::include_graphics("images/distribution-area-1.png")
 knitr::include_graphics("images/distribution-region-1.png")
 ```
 
-Figures \@ref(fig:distribution-area) and \@ref(fig:distribution-region) show
+Figures \@ref(fig:distribution-area) and \@ref(fig:distribution-region) show the
 distributions of a couple variables for a synthesized dataset and its real counterpart. 
 We see that they're similar enough, qualitatively, for the most part. Now, for
 point 3, our method falls a bit short, at least in our experiments. For example,
 in Figures \@ref(fig:relativties-area) and \@ref(fig:relativties-region) we show 
 GLM relativities of models fit on real and synthesized datasets. Of course, YMMV when
-it comes to your own datasets! All in all, perhaps our trained models won’t be able
-to reproduce that ‘82 Latour, but it’d be able to come up with something that
-resembles a Bordeaux blend.
+it comes to your own datasets. Also, in some cases, too much similarity in distributions
+or parameters may be troubling, if one is concerned about identifiability, but that's
+readily fixed by obfuscating the data manually. All in all, perhaps our trained 
+models won’t be able to reproduce that ‘82 Latour, but it’d be able to come up with
+something that resembles a Bordeaux blend.
 
 ```{r relativties-area, echo=FALSE, layout="l-body", fig.cap = "Relativities of the Area variable across cross-validated models."}
 knitr::include_graphics("images/relativities-area-1.png")

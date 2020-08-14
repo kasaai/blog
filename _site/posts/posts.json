@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/ctgan/",
+    "title": "Synthesizing Realistic Data for R&D",
+    "description": "Fake it till you make it -- from fancy wines to insurance datasets.",
+    "author": [
+      {
+        "name": "Kevin Kuo",
+        "url": {}
+      }
+    ],
+    "date": "2020-08-14",
+    "categories": [],
+    "preview": "posts/ctgan/images/ctgan.png",
+    "last_modified": "2020-08-14T08:40:39-07:00",
+    "input_file": {},
+    "preview_width": 1000,
+    "preview_height": 322
+  },
+  {
     "path": "posts/cellar/",
     "title": "Cellar: Open Datasets in Insurance",
     "description": "Improving discoverability and access of publicly available datasets.",
@@ -12,7 +30,7 @@
     "date": "2020-08-13",
     "categories": [],
     "preview": "posts/cellar/images/dataset_description.png",
-    "last_modified": "2020-08-13T09:24:54-07:00",
+    "last_modified": "2020-08-14T08:31:41-07:00",
     "input_file": {},
     "preview_width": 1218,
     "preview_height": 632

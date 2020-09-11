@@ -1,5 +1,5 @@
 ---
-title: "SynthETIC: A simulator of Synthetic Experience Tracking Insurance Claims"
+title: "SynthETIC: A Simulator of Synthetic Experience Tracking Insurance Claims"
 description: |
   Simulation of individual claims (and payments) that mirror the user's actual, 
   complex claim experience.

@@ -7,7 +7,20 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>SynthETIC: A simulator of Synthetic Experience Tracking Insurance Claims</title>
+      <dc:creator>Benjamin Avanzi</dc:creator>
+      <dc:creator>Greg Taylor</dc:creator>
+      <dc:creator>Melantha Wang</dc:creator>
+      <dc:creator>Bernard Wong</dc:creator>
+      <link>https://blog.kasa.ai/posts/synthetic</link>
+      <description>Simulation of individual claims (and payments) that mirror the user's actual, 
+complex claim experience.</description>
+      <guid>https://blog.kasa.ai/posts/synthetic</guid>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://blog.kasa.ai/posts/synthetic/images/plot-claims.png" medium="image" type="image/png" width="1344" height="1152"/>
+    </item>
     <item>
       <title>Synthesizing Realistic Data for R&amp;D</title>
       <dc:creator>Kevin Kuo</dc:creator>

@@ -205,49 +205,43 @@ output_actual_cum <- claim_output(
 
 The code above outputs a 40 × 40 cumulative payment square that summarises the claims by occurrence and development quarter. The table below compares the chain-ladder forecast of loss reserve and the "actual" loss as simulated for the unseen future. Unsurprisingly the chain-ladder performs very poorly, given the default data features by design (e.g. dependencies of multiple simulated quantities on the occurrence period, superimposed inflation operating with respect to payment period etc.) and the extent to which they breach chain ladder assumptions. Data sets such as this are useful for testing models that endeavour to represent data outside the scope of the chain-ladder.
 
-| Occurrence quarters | Target reserve (simulator) | Chain ladder estimate | \% Deviation |
-|:--------------------|:---------------------------|:----------------------|:------------:|
-|                     | \$m                        | \$m
-1 to 10           |              |
-| 9.2	                |      9.5                   |  3
+------------------------------------------------------------------------------------------
+Occurrence quarters    Target reserve (simulator)    Chain ladder estimate   \% Deviation
+---------------------- ----------------------------- ---------------------- --------------
+                       \$m                           \$m
+                       
+1 to 10                9.2	                         9.5                     3
 
-11 to 20          |       3      |
-| 26.2	               |     54.6                   |  109
+11 to 20               26.2	                         54.6                    109
 
-21 to 25        |              |
-| 26.1	               |      68.1                  |  161
+21 to 25               26.1	                         68.1                    161
 
-26 to 30        |              |
-| 61.8	               |       103.4                |  67
+26 to 30               61.8	                         103.4                   67
 
-31               |      67      |
-| 20.5	 	             |     22.4 	                 | 9
+31                     20.5	 	                       22.4 	                 9
 
-32       	         |              |
-| 32                  |       34.8		               | 43
+32		                 24.4	                         34.8		                 43
 
- 		               |      43      |
-| 33                  |      35.5		                | 27
+33		                 27.8 	                       35.5		                 27
 
-      		          |              |
-| 34                  |      4.5	                  |  48
- 35		             |              |
-| 35                  |       53.2	                |  101    
-36		         |              |
-| 36                  |       47.8 	               | 32
+34		                 30.1 	                       44.5	                   48
 
-3     		          |              |
-| 37                  |       66.4	                |  101
-38		             |      101     |
-| 38                  |     44.9		                 |  4
+35		                 26.4	                         53.2	                   101
 
-		                |       4      |
-| 39                  |      39.5	                 |   1
-40		              |       1      |
-| 40                  |       32.4	                |  -30   
-**Total**     |              |
-| **450.0**           |        **657.1**	          | **46**
---   ----------|--- ------    |h exact transaction times, i.e. time is measured on a continuous scale. This means we can also plot the payment pattern against development on a continuous scale:
+36		                 36.2	                         47.8 	                 32
+
+37		                 33.0	                         66.4	                   101
+
+38		                 43.1		                       44.9		                  4
+
+39		                 39.0 	                       39.5	                    1
+
+40		                 46.2	                         32.4	                   -30
+
+**Total**              **450.0**                     **657.1**	             **46**
+------------------------------------------------------------------------------------------
+
+`SynthETIC` works with exact transaction times, i.e. time is measured on a continuous scale. This means we can also plot the payment pattern against development on a continuous scale:
 
 ```{r, fig.width=7, fig.height=6}
 plot(all_claims)
@@ -256,7 +250,7 @@ plot(all_claims)
 The output can be used as a check for reasonableness of assumptions.
 
 # Conclusion
-This blog presents a ne
-wly released, [open source](https://github.com/agi-lab/SynthETIC) individual claim simulator, [`SynthETIC`](https://CRAN.R-project.org/package=SynthETIC), and highlights some of its main functionalities through a quick demo.
 
-`SynthETIC` facilitates research in alternative loss reserving models by providing synthetic data that reflects the complex features observed in real data. The code has been structured in a modular form to maximise the flexibility of the simulator in accommodating alternative claim experience, while maintaining dependencies between selected modules. This flexibility enables the generation of a collection of realistic data sets (at both claim and transactional level) providing a spectrum of complexity with which to challenge a proposed machine learning model
+This blog presents a newly released, [open source](https://github.com/agi-lab/SynthETIC) individual claim simulator, [`SynthETIC`](https://CRAN.R-project.org/package=SynthETIC), and highlights some of its main functionalities through a quick demo.
+
+`SynthETIC` facilitates research in alternative loss reserving models by providing synthetic data that reflects the complex features observed in real data. The code has been structured in a modular form to maximise the flexibility of the simulator in accommodating alternative claim experience, while maintaining dependencies between selected modules. This flexibility enables the generation of a collection of realistic data sets (at both claim and transactional level) providing a spectrum of complexity with which to challenge a proposed machine learning model.

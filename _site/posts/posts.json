@@ -24,8 +24,8 @@
     "date": "2020-09-14",
     "categories": [],
     "preview": "posts/synthetic/images/plot-claims.png",
-    "last_modified": "2020-09-11T00:13:43-07:00",
-    "input_file": "synthetic.utf8.md",
+    "last_modified": "2020-09-13T23:32:35-07:00",
+    "input_file": {},
     "preview_width": 1344,
     "preview_height": 1152
   },
@@ -42,7 +42,7 @@
     "date": "2020-08-14",
     "categories": [],
     "preview": "posts/ctgan/images/ctgan.png",
-    "last_modified": "2020-08-14T08:40:39-07:00",
+    "last_modified": "2020-09-10T22:10:58-07:00",
     "input_file": {},
     "preview_width": 1000,
     "preview_height": 322

@@ -1,5 +1,35 @@
 [
   {
+    "path": "posts/synthetic/",
+    "title": "SynthETIC: A Simulator of Synthetic Experience Tracking Insurance Claims",
+    "description": "Simulation of individual claims (and payments) that mirror the user's actual, \ncomplex claim experience.",
+    "author": [
+      {
+        "name": "Benjamin Avanzi",
+        "url": {}
+      },
+      {
+        "name": "Greg Taylor",
+        "url": {}
+      },
+      {
+        "name": "Melantha Wang",
+        "url": {}
+      },
+      {
+        "name": "Bernard Wong",
+        "url": {}
+      }
+    ],
+    "date": "2020-09-14",
+    "categories": [],
+    "preview": "posts/synthetic/images/plot-claims.png",
+    "last_modified": "2020-09-11T00:13:43-07:00",
+    "input_file": "synthetic.utf8.md",
+    "preview_width": 1344,
+    "preview_height": 1152
+  },
+  {
     "path": "posts/ctgan/",
     "title": "Synthesizing Realistic Data for R&D",
     "description": "Fake it till you make it -- from fancy wines to insurance datasets.",

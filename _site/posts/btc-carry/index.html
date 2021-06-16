@@ -18,46 +18,115 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
   <!--radix_placeholder_meta_tags-->
-<title>Kasa AI Blog: simulationmachine: Synthesizing Individual Claims Data</title>
+<title>Kasa AI Blog: In Search of Yield in Imaginary Internet Money</title>
 
-<meta property="description" itemprop="description" content="Generate claims data for loss reserving research and backtesting."/>
+<meta property="description" itemprop="description" content="Intro to the Bitcoin cash-and-carry trade"/>
 
-<link rel="canonical" href="https://blog.kasa.ai/posts/simulation-machine/"/>
+<link rel="canonical" href="https://blog.kasa.ai/posts/btc-carry/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-09-26"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-09-26"/>
-<meta name="article:author" content="Andrea Gabrielli"/>
+<meta property="article:published" itemprop="datePublished" content="2021-06-16"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-06-16"/>
 <meta name="article:author" content="Kevin Kuo"/>
-<meta name="article:author" content="Mario V. Wüthrich"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Kasa AI Blog: simulationmachine: Synthesizing Individual Claims Data"/>
+<meta property="og:title" content="Kasa AI Blog: In Search of Yield in Imaginary Internet Money"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Generate claims data for loss reserving research and backtesting."/>
-<meta property="og:url" content="https://blog.kasa.ai/posts/simulation-machine/"/>
+<meta property="og:description" content="Intro to the Bitcoin cash-and-carry trade"/>
+<meta property="og:url" content="https://blog.kasa.ai/posts/btc-carry/"/>
+<meta property="og:image" content="https://blog.kasa.ai/posts/btc-carry/unnamed-chunk-3-1.png"/>
+<meta property="og:image:width" content="1248"/>
+<meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Kasa AI Blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Kasa AI Blog: simulationmachine: Synthesizing Individual Claims Data"/>
-<meta property="twitter:description" content="Generate claims data for loss reserving research and backtesting."/>
-<meta property="twitter:url" content="https://blog.kasa.ai/posts/simulation-machine/"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Kasa AI Blog: In Search of Yield in Imaginary Internet Money"/>
+<meta property="twitter:description" content="Intro to the Bitcoin cash-and-carry trade"/>
+<meta property="twitter:url" content="https://blog.kasa.ai/posts/btc-carry/"/>
+<meta property="twitter:image" content="https://blog.kasa.ai/posts/btc-carry/unnamed-chunk-3-1.png"/>
+<meta property="twitter:image:width" content="1248"/>
+<meta property="twitter:image:height" content="768"/>
 
 <!--/radix_placeholder_meta_tags-->
-  
-  <meta name="citation_reference" content="citation_title=An individual claims history simulation machine;citation_publication_date=2018;citation_publisher=Multidisciplinary Digital Publishing Institute;citation_volume=6;citation_author=Andrea Gabrielli;citation_author=Mario V. Wüthrich"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","authors","slug","bibliography","date","output","author","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["simulationmachine: Synthesizing Individual Claims Data"]},{"type":"character","attributes":{},"value":["Generate claims data for loss reserving research and backtesting."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andrea Gabrielli"]},{"type":"character","attributes":{},"value":["https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["https://kevinykuo.com/"]},{"type":"character","attributes":{},"value":["Kasa AI"]},{"type":"character","attributes":{},"value":["https://kasa.ai/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mario V. Wüthrich"]},{"type":"character","attributes":{},"value":["https://people.math.ethz.ch/~wueth/"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]}]},{"type":"character","attributes":{},"value":["simulationmachine"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["09-26-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andrea Gabrielli"]},{"type":"character","attributes":{},"value":["https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["https://kevinykuo.com/"]},{"type":"character","attributes":{},"value":["Kasa AI"]},{"type":"character","attributes":{},"value":["https://kasa.ai/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mario V. Wüthrich"]},{"type":"character","attributes":{},"value":["https://people.math.ethz.ch/~wueth/"]},{"type":"character","attributes":{},"value":["RiskLab, ETH Zürich"]},{"type":"character","attributes":{},"value":["https://risklab.ch/"]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/simulation-machine/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","preview","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["In Search of Yield in Imaginary Internet Money"]},{"type":"character","attributes":{},"value":["Intro to the Bitcoin cash-and-carry trade"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-16-2021"]},{"type":"character","attributes":{},"value":["btc-carry"]},{"type":"character","attributes":{},"value":["unnamed-chunk-3-1.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/btc-carry/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","individual-claims-history-simulation-machine_files/bowser-1.9.3/bowser.min.js","individual-claims-history-simulation-machine_files/distill-2.2.21/template.v2.js","individual-claims-history-simulation-machine_files/jquery-1.11.3/jquery.min.js","individual-claims-history-simulation-machine_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["btc-carry_files/anchor-4.2.2/anchor.min.js","btc-carry_files/bowser-1.9.3/bowser.min.js","btc-carry_files/distill-2.2.21/template.v2.js","btc-carry_files/figure-html5/unnamed-chunk-3-1.png","btc-carry_files/header-attrs-2.8/header-attrs.js","btc-carry_files/jquery-1.11.3/jquery.min.js","btc-carry_files/popper-2.6.0/popper.min.js","btc-carry_files/tippy-6.2.7/tippy-bundle.umd.min.js","btc-carry_files/tippy-6.2.7/tippy-light-border.css","btc-carry_files/tippy-6.2.7/tippy.css","btc-carry_files/tippy-6.2.7/tippy.umd.min.js","btc-carry_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-3-1.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -1981,7 +2050,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2010,7 +2085,7 @@ gtag('config', 'UA-130804330-2');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"simulationmachine: Synthesizing Individual Claims Data","description":"Generate claims data for loss reserving research and backtesting.","authors":[{"author":"Andrea Gabrielli","authorURL":"https://math.ethz.ch/utils/search.html?persid=173657&pagetype=people","affiliation":"RiskLab, ETH Zürich","affiliationURL":"https://risklab.ch/","orcidID":""},{"author":"Kevin Kuo","authorURL":"https://kevinykuo.com/","affiliation":"Kasa AI","affiliationURL":"https://kasa.ai/","orcidID":""},{"author":"Mario V. Wüthrich","authorURL":"https://people.math.ethz.ch/~wueth/","affiliation":"RiskLab, ETH Zürich","affiliationURL":"https://risklab.ch/","orcidID":""}],"publishedDate":"2019-09-26T00:00:00.000+00:00","citationText":"Gabrielli, et al., 2019"}
+{"title":"In Search of Yield in Imaginary Internet Money","description":"Intro to the Bitcoin cash-and-carry trade","authors":[{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio, Kasa AI","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-16T00:00:00.000+00:00","citationText":"Kuo, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2039,199 +2114,168 @@ gtag('config', 'UA-130804330-2');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>simulationmachine: Synthesizing Individual Claims Data</h1>
-<p>Generate claims data for loss reserving research and backtesting.</p>
+<h1>In Search of Yield in Imaginary Internet Money</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Intro to the Bitcoin cash-and-carry trade</p></p>
 </div>
 
+<div class="d-byline">
+  Kevin Kuo  (RStudio, Kasa AI)
+  
+<br/>06-16-2021
+</div>
 
 <div class="d-article">
-<p>Today we’re excited to announce the <a href="https://github.com/kasaai/simulationmachine">simulationmachine</a> package, based on the paper <em>An Individual Claims History Simulation Machine</em><span class="citation" data-cites="gabrielli2018individual">(Gabrielli and Wüthrich <a href="#ref-gabrielli2018individual">2018</a>)</span>. We created this package for the practitioner or researcher who needs realistic data for testing reserving or claims analytics modeling workflows.</p>
-<p>The package allows you to simulate individual claim characteristics along with their cash flow histories. We first show a quick example before delving into details of the algorithm.</p>
-<h2 id="simulationmachine">simulationmachine</h2>
-<p>You can download simulationmachine from GitHub with</p>
-<pre class="r"><code>
-# install.packages(&quot;remotes&quot;)
-remotes::install_github(&quot;kasaai/simulationmachine&quot;)</code></pre>
-<p>First, specify the desired characteristics of the simulation, by scribing a <em>charm</em> (which we’ll use to do some <a href="https://conjuror.kasa.ai"><em>conjuoring</em></a> later!):</p>
+<p>While most of the content on this blog has focused on the liabilities side of the balance sheet of insurers, in this post we take a look at the asset side of things, through a trendy lens!</p>
+<p>Of course, none of what follow is financial/investments/trading advice :)</p>
+<h1 id="much-wow-and-boomercoin">Much wow and Boomercoin</h1>
+<p>While Dog Money has been popular on TikTok lately and pretty much established itself as an asset class, the OG, Bitcoin, has also captured a respectable share of headlines. Regardless of what you think of cryptocurrencies in general (whether it’s all a massive scam or the future of France), it’s probably worth keeping an eye on as a professional in the insurance industry. While MicroStrategy (MacroStrategy?) and Tesla, which is getting more and more involved with insurance, have been more vocal about Bitcoin, some traditional insurers have quietly added it to their balance sheets<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<h1 id="getting-that-yield">Getting that yield</h1>
+<p>One way to take advantage of an appreciating asset is to simply have it on your balance sheet and watch it go up (relative to your currency of denomination), but sometimes things aren’t up only, and you might end up under water, possibly very deeply so. A casual -30% drawdown isn’t a great look if you’re trying to be a steady, conservative insurer.</p>
+<p>How do we incorporate Bitcoin into our asset strategy, then, if we don’t want to be subjected to the wild swings in quarterly investments PnL? If you took a look at a random insurer’s balance sheet, you’d probably that bonds and other fixed income products take up at least half of the assets. Bonds are great from an insurance company’s perspective. For the most part, you know what you’ll be getting, and when you’ll be getting them. The issue with low interest rate environments, like the one we’re in now, though, is that while you still know what you’ll be getting, you know you’re not gonna be getting very much.</p>
+<p>What if we could take a trade with Bitcoin that behaves like a bond but with better yield? For portfolio managers at insurers who still feel a bit iffy about crypto, something like this might be a more interesting starting point for discussion.</p>
+<h1 id="the-most-obvious-trade">The most obvious trade</h1>
+<p>Indeed, I’m talking about the BTC cash-and-carry trade, which is arguably the most popular and important trade in the space<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. For the benefit of practitioners who don’t work with investments regularly, and actuaries who took the FM/MFE exams a few too many years ago, let’s take this apart in detail.</p>
+<h2 id="futures">Futures</h2>
+<p>A future contract is an agreement to buy or sell a particular asset at some predetermined time in the future. These contracts can be settled via physical delivery or be cash settled. As an example of the former, if you’re long (bought) a contract of live cattle futures on the day it expires, you have to show up at the livestock yard at the preset time with enough trucks to take delivery of your ~30 heads of cattle. Futures for Bitcoin tend to be of the latter type, i.e., instead of exchanging actual Bitcoins with your counterparty, you receive or pay the price difference of BTC at expiration relative to when you entered into the contract.</p>
+<h2 id="contango">Contango</h2>
+<p>Bitcoin futures trade on various exchanges and come in different flavors. As a first example, we’ll take a look at Bybit. While one can look up prices on the Web UI, all exchanges offer API access, which we’ll get used to working with now, to enable more systematic data gathering in future posts.</p>
+<p>Our first order of business is to grab the identifiers of the futures contracts and their prices from the exchange.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(simulationmachine)
-
-charm &lt;- simulation_machine(
-  num_claims = 50000, 
-  lob_distribution = c(0.25, 0.25, 0.30, 0.20), 
-  inflation = c(0.01, 0.01, 0.01, 0.01), 
-  sd_claim = 0.85, 
-  sd_recovery = 0.75
-)
-charm</code></pre>
-<pre><code>
-A simulation charm for `simulation_machine`
-
-Each record is:
- - A snapshot of a claim&#39;s incremental paid loss and claim status
-   at a development year.
-
-Specs:
- - Expected number of claims: 50,000
- - LOB distribution: 0.25, 0.25, 0.3, 0.2
- - Inflation: 0.01, 0.01, 0.01, 0.01
- - SD of claim sizes: 0.85,
- - SD of recovery sizes: 0.75</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://httr.r-lib.org/'>httr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.bybit.com/v2/public/symbols"</span><span class='op'>)</span> |&gt; 
+  <span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>futures_symbols</span> <span class='op'>&lt;-</span> <span class='va'>r</span><span class='op'>$</span><span class='va'>result</span> |&gt; 
+  <span class='fu'>keep</span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>r"(BTCUSD.+\d$)"</span>, <span class='va'>x</span><span class='op'>$</span><span class='va'>alias</span><span class='op'>)</span><span class='op'>)</span> |&gt; 
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/stats/setNames.html'>setNames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>$</span><span class='va'>name</span>, <span class='va'>x</span><span class='op'>$</span><span class='va'>alias</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>futures_symbols</span>
+</code></pre>
 </div>
-<p>The charm encodes the details of the simulation we want to create. In this case, the simulation contains the following:</p>
-<ul>
-<li>Approximately 50,000 claims (note that this is an expected value, as claim incidence is also simulated)</li>
-<li>The distribution among the four lines of business is 25%, 25%, 30%, and 20%</li>
-<li>Inflation is a constant 1% for all lines of business</li>
-<li>Claims are lognormally distributed with a standard deivation of 0.85</li>
-<li>Recoveries are lognormally distributed with a standard deviation of 0.75</li>
-</ul>
-<p>Once we have the specification, we can perform the actual simulation using the <code>conjure()</code> function:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(tidyverse)
-records &lt;- conjure(charm, seed = 100)
-glimpse(records)</code></pre>
-<pre><code>
-Observations: 603,324
-Variables: 11
-$ claim_id          &lt;chr&gt; &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;1&quot;, &quot;…
-$ accident_year     &lt;int&gt; 1994, 1994, 1994, 1994, 1994, 1994, 1994,…
-$ development_year  &lt;int&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, …
-$ accident_quarter  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4,…
-$ report_delay      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ lob               &lt;chr&gt; &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;3&quot;, &quot;…
-$ cc                &lt;chr&gt; &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;, &quot;42&quot;,…
-$ age               &lt;int&gt; 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 6…
-$ injured_part      &lt;chr&gt; &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;, &quot;51&quot;,…
-$ paid_loss         &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4913,…
-$ claim_status_open &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,…</code></pre>
+<pre><code> BTCUSD1231  BTCUSD0924  BTCUSD0625 
+&quot;BTCUSDZ21&quot; &quot;BTCUSDU21&quot; &quot;BTCUSDM21&quot; </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>futures_prices</span> <span class='op'>&lt;-</span> <span class='va'>futures_symbols</span> |&gt; 
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.bybit.com/v2/public/tickers"</span>, query <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>symbol <span class='op'>=</span> <span class='va'>x</span><span class='op'>)</span><span class='op'>)</span> |&gt; 
+      <span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='op'>)</span>
+    <span class='va'>r</span><span class='op'>$</span><span class='va'>result</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>$</span><span class='va'>last_price</span>
+  <span class='op'>}</span><span class='op'>)</span> |&gt; 
+  <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='op'>)</span> |&gt; 
+  <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='fu'>everything</span><span class='op'>(</span><span class='op'>)</span>, values_to <span class='op'>=</span> <span class='st'>"price"</span><span class='op'>)</span>
+
+<span class='va'>futures_prices</span>
+</code></pre>
 </div>
-<p>In the output data frame, each row corresponds to a snapshot in time of a claim. The number of rows, 603,324, corresponds to 50,277 claims times 12 time steps. At this point, the dataset is ready for use in a claims level exercise. However, if you’re looking for aggregate triangle data, that can be easily done with a few transformations. Say we’re interested in a cumulative paid loss triangle as of calendar year 1999 (so it’ll fit in the margins of this blog post), we can use the following snippet:</p>
+<pre><code># A tibble: 3 x 2
+  name       price   
+  &lt;chr&gt;      &lt;chr&gt;   
+1 BTCUSD1231 40180.50
+2 BTCUSD0924 39371.00
+3 BTCUSD0625 38559.50</code></pre>
+</div>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<p>Here, the numbers after <code>BTCUSD</code> denote the dates of expiration, so <code>0625</code> means June 25th, and <code>1231</code> means December 31st.</p>
+<p>Let’s next plot the current prices of each contract.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-triangle &lt;- records %&gt;% 
-  filter(accident_year + development_year &lt;= 1999) %&gt;% 
-  # aggregate to AY-dev cells
-  group_by(accident_year, development_year) %&gt;% 
-  summarize(paid_loss = sum(paid_loss)) %&gt;% 
-  group_by(accident_year) %&gt;% 
-  # calculate cumulative losses
-  mutate(cumulative_paid_loss = cumsum(paid_loss)) %&gt;% 
-  select(accident_year, development_year, cumulative_paid_loss) %&gt;% 
-  # reshape the data
-  pivot_wider(
-    names_from = &quot;development_year&quot;, 
-    values_from = &quot;cumulative_paid_loss&quot;
-  )
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='va'>futures_prices</span> |&gt; 
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>name</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>price</span>, group <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"symbol"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="btc-carry_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<p>We see that the “curve” is upwards sloping, and the fancy finance term for this is <em>contango</em> (its opposite, where the slope is down, is called <em>backwardation</em>). The reasons for this behavior is manifold and we won’t delve into them here, but a reasonable first approximation is that the world wants to be net long BTC, and is willing to pay a premium to do so.</p>
+<h2 id="the-trade">The Trade</h2>
+<p>Now let’s take a look at the price of Bitcoin. Since Bybit is a purely derivatives exchange, we need to look elsewhere for spot (i.e. actual Bitcoin) prices. Again, arbitrarily picking an exchange for this example, we’ll look at Coinbase:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.pro.coinbase.com/products/BTC-USD/book"</span><span class='op'>)</span>
+<span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='va'>r</span><span class='op'>)</span> |&gt; <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>List of 3
+ $ bids    :List of 1
+  ..$ :List of 3
+  .. ..$ : chr &quot;38577.54&quot;
+  .. ..$ : chr &quot;0.36569759&quot;
+  .. ..$ : int 3
+ $ asks    :List of 1
+  ..$ :List of 3
+  .. ..$ : chr &quot;38577.55&quot;
+  .. ..$ : chr &quot;0.03182631&quot;
+  .. ..$ : int 2
+ $ sequence: num 2.65e+10</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
 
-triangle</code></pre>
+</div>
+<p>This shows that we can buy BTC at a rate of 1 Bitcoin for $38,577.55 United States Dollars. This is, of course, a bit lower than the $40,180.5 we saw earlier for the BTCUSD December 31st futures on Bybit. Even for those of us new to this, we can start go guess what the trade could look like: Buy some BTC from Coinbase, and at the same time sell the 12/31 futures, and we should somehow capture the ~$1,602.95 difference. And, indeed, modulo some logistical details, that’s in fact what we’d execute!</p>
+<ol type="1">
+<li>Borrow $<span class="math inline">\(q_S\)</span>.</li>
+<li>Buy $<span class="math inline">\(q_S\)</span> worth of BTC on Coinbase.</li>
+<li>Deposit the coins on Bybit, and sell some (specifically, $<span class="math inline">\(q_F\)</span> worth) of 12/31 BTCUSD futures.</li>
+<li>Wait until 12/31 when the futures position expires.</li>
+<li>Move the BTC to Coinbase and sell it for USD.</li>
+</ol>
+<p>Let’s now calculate how much dough we can make (if any at all!). Since we’ve got a mathematicall inclined readership on this blog, we’ll try to compute the PnL in general. To do that, first some more notation. We’ll denote by <span class="math inline">\(p_S\)</span> the current spot price of BTC, <span class="math inline">\(p_F\)</span> the price of the 12/31 futures contract, and <span class="math inline">\(p_T\)</span> the (as of now unknown) price of Bitcoin on 12/31.</p>
+<p>The PnL on the spot purchase is straightforward:</p>
+<p><span class="math display">\[
+\text{PnL}_{S} = \frac{q_S}{p_S}(p_T - p_S).
+\]</span> The futures contract, on the other hand, may seem a bit weird for those who are used to traditional finance products. On Bybit, the futures have “inverse” payoff and are “coin margined”. The latter means that you post collateral in BTC and receive/pay PnL in BTC. The inverse bit means the PnL is calculated off percentage moves rather than linearly, in other words, the PnL in BTC is</p>
+<p><span class="math display">\[
+q_F(\frac{1}{p_T} - \frac{1}{p_F}).
+\]</span> To get this in dollar terms, we would need to multiply by the BTC/USD exchange rate at expiry, so that</p>
+<p><span class="math display">\[
+\text{PnL}_F = q_F(\frac{1}{p_T} - \frac{1}{p_F}) \times p_T,
+\]</span></p>
+<p>and we have the PnL for the trade coming out to be, with a little bit of algebra,</p>
+<p><span class="math display">\[
+\text{PnL} = \frac{q_S}{p_S}(p_T - p_S) + \frac{q_F}{p_F}(p_F - p_T).
+\]</span></p>
+<p>Now, if we sell just the right number <span class="math inline">\(q_F\)</span> of contracts, we can make the <span class="math inline">\(p_T\)</span> term go away, effectively removing our exposure to BTC price movements. As my calculus instructor from college would say, <em>by inspection</em>, we choose <span class="math inline">\(q_F = q_S\frac{p_F}{p_S}\)</span>, and end up with</p>
+<p><span class="math display">\[
+\text{PnL} = \frac{q_S}{p_S}(p_F - p_S).
+\]</span> Hence, we’ve come up with a bond that’s going to pay us a yield of <span class="math inline">\((p_F - p_S) / p_S\)</span>.</p>
+<p>This corresponds to an annualized yield of</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>days_to_maturity</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fu'>lubridate</span><span class='fu'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/as_date.html'>as_date</a></span><span class='op'>(</span><span class='st'>"2021-12-31"</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'>lubridate</span><span class='fu'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/now.html'>today</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fl'>365</span> <span class='op'>/</span> <span class='va'>days_to_maturity</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>p_F</span> <span class='op'>-</span> <span class='va'>p_S</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>p_S</span>
+</code></pre>
+</div>
+<pre><code>[1] 0.07659722</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">accident_year</th>
-<th style="text-align: right;">0</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1994</td>
-<td style="text-align: right;">4,252,450</td>
-<td style="text-align: right;">6,669,347</td>
-<td style="text-align: right;">7,852,028</td>
-<td style="text-align: right;">8,372,107</td>
-<td style="text-align: right;">8,682,360</td>
-<td style="text-align: right;">8,875,666</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1995</td>
-<td style="text-align: right;">3,493,776</td>
-<td style="text-align: right;">5,438,160</td>
-<td style="text-align: right;">5,923,379</td>
-<td style="text-align: right;">6,157,112</td>
-<td style="text-align: right;">6,319,793</td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">1996</td>
-<td style="text-align: right;">4,703,297</td>
-<td style="text-align: right;">7,321,589</td>
-<td style="text-align: right;">8,345,325</td>
-<td style="text-align: right;">8,933,265</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1997</td>
-<td style="text-align: right;">4,797,499</td>
-<td style="text-align: right;">7,796,097</td>
-<td style="text-align: right;">8,996,412</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">1998</td>
-<td style="text-align: right;">3,980,551</td>
-<td style="text-align: right;">6,687,173</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1999</td>
-<td style="text-align: right;">3,557,440</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-</tbody>
-</table>
+
 </div>
-<h2 id="motivations-technical-details">Motivations &amp; Technical Details</h2>
-<p>The aim of the Simulation Machine<span class="citation" data-cites="gabrielli2018individual">(Gabrielli and Wüthrich <a href="#ref-gabrielli2018individual">2018</a>)</span> is to develop a stochastic simulation machine that generates individual claims histories of non-life insurance claims. Recently, loss reserving research has been very active, leading to many new ideas and techniques to estimate the claims reserves required to cover future payments for claims that have occurred in the past. In particular, there has been a lot of effort put into the development of claims reserving methods based on individual claims histories. However, a main shortcoming in this field of research is that there is no publicly available individual claims history data, as insurance companies are often unwilling or unable to publish their data due to confidentiality reasons. Therefore, there is no possibility to back-test the newly developed claims reserving methods. By developing the algorithm and the simulation package, we hope to provide a common ground for the actuarial community in the form of publicly available data for individual claims reserving.</p>
-<p>Of course, the simulated individual claims histories should be as realistic as possible to reflect a real insurance claims portfolio. Therefore, the simulation machine was calibrated to real experience data graciously provided by the <a href="https://www.suva.ch/en?lang=en">Swiss National Accident Insurance Fund (SUVA)</a>. This dataset consisted of <span class="math inline">\(n \approx 10\)</span> million individual claims that occurred between 1994 and 2005, and for each of these individual claims we had full information of 12 years of claims development as well as of the relevant feature information, which we discuss below.</p>
-<p>Internally, the algorithm consists of two main simulation stages. In the first stage, a portfolio of individual claims characteristics is generated, and each claim contains the following features:</p>
-<ul>
-<li>The line of business (<code>lob</code>), of which there are four</li>
-<li>The claims code (<code>cc</code>), which denotes the labor sector of the claimant, with 51 possible values</li>
-<li>The accident year (<code>accident_year</code>)</li>
-<li>The accident quarter (<code>accident_quarter</code>)</li>
-<li>The age of the injured <code>age</code> (in 5 years age buckets), which can take on values <code>15, 20, ..., 70</code></li>
-<li>The injured body part (<code>injured_part</code>), with 46 possible values</li>
-</ul>
-<!-- Note that for the labels $\{1, \dots, 53\}$ and $\{1, \dots, 99\}$ of the two features claims code and injured body part we have gaps, that is, in total we can simulate from 51 different claims codes and from 46 different injured body parts. -->
-<p>Once the static claim characteristics are generated, we use them in the second simulation stage to generate:</p>
-<ul>
-<li>The (incremental) individual claims cash flow, <code>paid_loss</code>, for <code>development_year = 0, ..., 11</code></li>
-<li>The claim status process <code>claim_status_open</code> (again for <code>development_year = 0, ..., 11</code>) which is an indicator variable denoting whether the considered claim is open at the end of the accounting year <code>accident_year + development_year</code></li>
-</ul>
-<p>We remark that we only consider yearly payments, that is, multiple payments and recovery payments within each calendar year are aggregated into a single annual payment. This single annual payment can either be positive or negative, depending whether we have higher claim payments or higher recovery payments in that year. The sum over all yearly payments of any given claim is constrained to be nonnegative because recoveries cannot exceed payments.</p>
-<p>The simulation of the cash flow process and the claim status process is based on neural networks to incorporate individual claims feature information. In recent years, neural networks have proved to be very powerful tools in classification and regression problems. Their drawbacks are that they are rather difficult to calibrate and, once calibrated, they act almost like black boxes between inputs and outputs. Of course, this is a major disadvantage in interpretation and getting deeper insight. However, the missing interpretation is not necessarily a disadvantage in this simulation machine because it implies, in back-testing other methods, that the true data generating mechanism cannot easily be guessed.</p>
-<p>Summarizing, simulationmachine, with the algorithm it implements, provides a way to generate a synthetic insurance dataset consisting of individual claims. These claims contain a rich set of feature information, along with time series of cash flows and claims status indicators. In particular, we can simulate claims from 12 different accident years, and for every individual claim we are provided with 12 years of claims development.</p>
-<h2 id="consistent-interfaces-for-simulation">Consistent Interfaces for Simulation</h2>
-<p>The workflow of generating data for research and backtesting is shared by researchers and practitioners alike. We believe that it is worthwhile to optimize this workflow by streamlining the process of generating data using different simulators. The simulationmachine package implements the <a href="https://conjuror.kasa.ai/">conjuror</a> interface, which includes a set of conventions for simulator package authors to consider. These conventions are currently under active development, and we encourage you to participate in shaping them.</p>
-<h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
-<p>We would like to thank Ryan Thomas, Hadrien Dykiel, and Frankie Logan for their helpful comments.</p>
-<div id="refs" class="references">
-<div id="ref-gabrielli2018individual">
-<p>Gabrielli, Andrea, and Mario V. Wüthrich. 2018. “An Individual Claims History Simulation Machine.” <em>Risks</em> 6 (2). Multidisciplinary Digital Publishing Institute: 29. <a href="https://doi.org/10.3390/risks6020029">https://doi.org/10.3390/risks6020029</a>.</p>
-</div>
-</div>
+<p>How does 7.66% stack up with the junk bonds held by your company?</p>
+<h1 id="risks">Risks</h1>
+<p>OK, so what’s the catch?</p>
+<p>The biggest issue is probably actually convincing the asset management team that this isn’t a scam, and working through regulatory considerations, e.g., after taking into account risk capital required to put on the trade, is the net yield still reasonable?</p>
+<p>On the trade itself, the two main considerations are mark-to-market risk, exchange counterparty risk, and execution risk.</p>
+<p>While we know that, on 12/31, the futures price is going to be about equal to the spot price, the market could move against us between now and then. The basis, or spread between futures and spot, is currently $1,602.95, but it could widen to, say, $3,000 or more, before they converge on expiration. Depending on how risk management parameters are set up, this could be problematic.</p>
+<p>When you deposit your Bitcoin on an exchange, there is always a chance, however small, that it randomly shuts down and you never see your coins again. To mitigate this, you could spread your trade out on several exchanges, and also utilize leverage so that you don’t have to deposit the full amount of the trade. If leverage is employed, you’ll have to keep an eye on the margin requirements in case the futures trade goes against you, and post additional collateral lest you get liquidated, or be forced to close your position.</p>
+<p>Finally, another consideration is that of execution risk. If we’re putting a $10,000 trade on, the market impact is minimal. However, if we’re instead doing $10 million, slippage can start becoming an issue if we’re not careful. If we’re holding the position until the literal second of expiration, we’ll also need to be mindful of the futures contract settlement mechanism, which differs from exchange to exchange, but all involve taking some sort of time weighted average of the prices for a period of time before expiration.</p>
+<h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>
+<p>In this post, we provide a gentle intro to crypto via the BTC cash-and-carry trade. In future posts, we’ll look into other venues that could potentially be incorporated into an investment strategy, and explore how more advanced analytics can be utilized to analyze risk.</p>
+<p>Also, if you’re a crypto enthusiast working in insurance and have thoughts to share, please reach out!</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/several-us-insurers-begin-to-dabble-with-cryptocurrency-investments-in-q1-64884124" class="uri">https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/several-us-insurers-begin-to-dabble-with-cryptocurrency-investments-in-q1-64884124</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><a href="https://cryptohayes.medium.com/all-aboard-4d50435190d6" class="uri">https://cryptohayes.medium.com/all-aboard-4d50435190d6</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2252,10 +2296,7 @@ triangle</code></pre>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-  <h3 id="references">References</h3>
-  <div id="references-listing"></div>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

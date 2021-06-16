@@ -111,12 +111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output"]}},"value":[{"type":"character","attributes":{},"value":["In Search of Yield in Imaginary Internet Money"]},{"type":"character","attributes":{},"value":["Intro to the Bitcoin cash-and-carry trade\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-16-2021"]},{"type":"character","attributes":{},"value":["btc-carry"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","preview","draft","output"]}},"value":[{"type":"character","attributes":{},"value":["In Search of Yield in Imaginary Internet Money"]},{"type":"character","attributes":{},"value":["Intro to the Bitcoin cash-and-carry trade\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-16-2021"]},{"type":"character","attributes":{},"value":["btc-carry"]},{"type":"character","attributes":{},"value":["unnamed-chunk-3-1.png"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["btc-carry_files/anchor-4.2.2/anchor.min.js","btc-carry_files/bowser-1.9.3/bowser.min.js","btc-carry_files/distill-2.2.21/template.v2.js","btc-carry_files/figure-html5/unnamed-chunk-2-1.png","btc-carry_files/figure-html5/unnamed-chunk-3-1.png","btc-carry_files/header-attrs-2.8/header-attrs.js","btc-carry_files/jquery-1.11.3/jquery.min.js","btc-carry_files/popper-2.6.0/popper.min.js","btc-carry_files/tippy-6.2.7/tippy-bundle.umd.min.js","btc-carry_files/tippy-6.2.7/tippy-light-border.css","btc-carry_files/tippy-6.2.7/tippy.css","btc-carry_files/tippy-6.2.7/tippy.umd.min.js","btc-carry_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["btc-carry_files/anchor-4.2.2/anchor.min.js","btc-carry_files/bowser-1.9.3/bowser.min.js","btc-carry_files/distill-2.2.21/template.v2.js","btc-carry_files/figure-html5/unnamed-chunk-3-1.png","btc-carry_files/header-attrs-2.8/header-attrs.js","btc-carry_files/jquery-1.11.3/jquery.min.js","btc-carry_files/popper-2.6.0/popper.min.js","btc-carry_files/tippy-6.2.7/tippy-bundle.umd.min.js","btc-carry_files/tippy-6.2.7/tippy-light-border.css","btc-carry_files/tippy-6.2.7/tippy.css","btc-carry_files/tippy-6.2.7/tippy.umd.min.js","btc-carry_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-3-1.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1523,9 +1523,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre><code># A tibble: 3 x 2
   name       price   
   &lt;chr&gt;      &lt;chr&gt;   
-1 BTCUSD1231 40295.00
-2 BTCUSD0924 39492.00
-3 BTCUSD0625 38652.50</code></pre>
+1 BTCUSD1231 40288.00
+2 BTCUSD0924 39428.00
+3 BTCUSD0625 38627.50</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
@@ -1556,20 +1556,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre><code>List of 3
  $ bids    :List of 1
   ..$ :List of 3
-  .. ..$ : chr &quot;38637.92&quot;
-  .. ..$ : chr &quot;0.00766728&quot;
-  .. ..$ : int 1
+  .. ..$ : chr &quot;38621.96&quot;
+  .. ..$ : chr &quot;0.56525656&quot;
+  .. ..$ : int 5
  $ asks    :List of 1
   ..$ :List of 3
-  .. ..$ : chr &quot;38637.93&quot;
-  .. ..$ : chr &quot;0.32945379&quot;
-  .. ..$ : int 3
+  .. ..$ : chr &quot;38621.97&quot;
+  .. ..$ : chr &quot;0.0782&quot;
+  .. ..$ : int 2
  $ sequence: num 2.65e+10</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<p>This shows that we can buy BTC at a rate of 1 Bitcoin for $38,637.93 United States Dollars. This is, of course, a bit lower than the $40,295 we saw earlier for the BTCUSD December 31st futures on Bybit. Even for those of us new to this, we can start go guess what the trade could look like: Buy some BTC from Coinbase, and at the same time sell the 12/31 futures, and we should somehow capture the ~$1,657.07 difference. And, indeed, modulo some logistical details, that’s in fact what we’d execute!</p>
+<p>This shows that we can buy BTC at a rate of 1 Bitcoin for $38,621.97 United States Dollars. This is, of course, a bit lower than the $40,288 we saw earlier for the BTCUSD December 31st futures on Bybit. Even for those of us new to this, we can start go guess what the trade could look like: Buy some BTC from Coinbase, and at the same time sell the 12/31 futures, and we should somehow capture the ~$1,666.03 difference. And, indeed, modulo some logistical details, that’s in fact what we’d execute!</p>
 <ol type="1">
 <li>Borrow $<span class="math inline">\(q_S\)</span>.</li>
 <li>Buy $<span class="math inline">\(q_S\)</span> worth of BTC on Coinbase.</li>
@@ -1603,17 +1603,17 @@ q_F(\frac{1}{p_T} - \frac{1}{p_F}).
 <span class='fl'>365</span> <span class='op'>/</span> <span class='va'>days_to_maturity</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>p_F</span> <span class='op'>-</span> <span class='va'>p_S</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>p_S</span>
 </code></pre>
 </div>
-<pre><code>[1] 0.07905961</code></pre>
+<pre><code>[1] 0.07951994</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<p>How does 7.91% stack up with the junk bonds held by your company?</p>
+<p>How does 7.95% stack up with the junk bonds held by your company?</p>
 <h1 id="risks">Risks</h1>
 <p>OK, so what’s the catch?</p>
 <p>The biggest issue is probably actually convincing the asset management team that this isn’t a scam, and working through regulatory considerations, e.g., after taking into account risk capital required to put on the trade, is the net yield still reasonable?</p>
 <p>On the trade itself, the two main considerations are mark-to-market risk, exchange counterparty risk, and execution risk.</p>
-<p>While we know that, on 12/31, the futures price is going to be about equal to the spot price, the market could move against us between now and then. The basis, or spread between futures and spot, is currently $1,657.07, but it could widen to, say, $3,000 or more, before they converge on expiration. Depending on how risk management parameters are set up, this could be problematic.</p>
+<p>While we know that, on 12/31, the futures price is going to be about equal to the spot price, the market could move against us between now and then. The basis, or spread between futures and spot, is currently $1,666.03, but it could widen to, say, $3,000 or more, before they converge on expiration. Depending on how risk management parameters are set up, this could be problematic.</p>
 <p>When you deposit your Bitcoin on an exchange, there is always a chance, however small, that it randomly shuts down and you never see your coins again. To mitigate this, you could spread your trade out on several exchanges, and also utilize leverage so that you don’t have to deposit the full amount of the trade. If leverage is employed, you’ll have to keep an eye on the margin requirements in case the futures trade goes against you, and post additional collateral lest you get liquidated, or be forced to close your position.</p>
 <p>Finally, another consideration is that of execution risk. If we’re putting a $10,000 trade on, the market impact is minimal. However, if we’re instead doing $10 million, slippage can start becoming an issue if we’re not careful. If we’re holding the position until the literal second of expiration, we’ll also need to be mindful of the futures contract settlement mechanism, which differs from exchange to exchange, but all involve taking some sort of time weighted average of the prices for a period of time before expiration.</p>
 <h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>

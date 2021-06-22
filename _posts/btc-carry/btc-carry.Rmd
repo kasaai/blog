@@ -234,7 +234,7 @@ that this isn't a scam, and working through regulatory considerations, e.g.,
 after taking into account risk capital required to put on the trade, is the net
 yield still reasonable?
 
-On the trade itself, the two main considerations are mark-to-market risk,
+On the trade itself, the three main considerations are mark-to-market risk,
 exchange counterparty risk, and execution risk.
 
 While we know that, on 12/31, the futures price is going to be about equal to the

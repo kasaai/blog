@@ -7,7 +7,16 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>In Search of Yield in Imaginary Internet Money</title>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <link>https://blog.kasa.ai/posts/btc-carry</link>
+      <description>Intro to the Bitcoin cash-and-carry trade</description>
+      <guid>https://blog.kasa.ai/posts/btc-carry</guid>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://blog.kasa.ai/posts/btc-carry/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>SynthETIC: A Simulator of Synthetic Experience Tracking Insurance Claims</title>
       <dc:creator>Benjamin Avanzi</dc:creator>

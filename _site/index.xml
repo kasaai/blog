@@ -7,7 +7,15 @@
     <description>Kasa AI Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>R &lt;3 Redis, with examples in logging and model inference</title>
+      <dc:creator>Kevin Kuo</dc:creator>
+      <link>https://blog.kasa.ai/posts/redis</link>
+      <description>Intro to Redis with R and applications</description>
+      <guid>https://blog.kasa.ai/posts/redis</guid>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>In Search of Yield in Imaginary Internet Money</title>
       <dc:creator>Kevin Kuo</dc:creator>

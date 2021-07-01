@@ -1,0 +1,327 @@
+---
+title: "R <3 Redis, with examples in logging and model inference"
+description: |
+    Intro to Redis with R and applications
+author:
+  - name: Kevin Kuo
+    affiliation: RStudio, Kasa AI
+date: 06-29-2021
+slug: intro-redis
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Every once in a while I play with a new open source project and think "wow I can’t believe this **** is free". The most recent such discovery for me is Redis, which is advertised as an “in-memory data structure store”. So basically we can store things like strings, lists, hashes, etc., *in memory*, and retrieve them. It is exactly like what you’d expect:
+
+```{r}
+library(redux)
+rc <- redux::hiredis(host = "localhost", port = "6379")
+rc$SET("foo", "bar")
+rc$GET("foo")
+```
+
+Here, we've used the redux package[^9] which provides an R interface to the
+C Redis client.
+
+[^9]: https://github.com/richfitz/redux
+
+# But Why?
+
+Okay. Cool. But how does that help me, a data scientist/engineer using R?
+
+If you develop Shiny apps, one natural way to utilize Redis is its most common
+use case -- as a cache. Maybe you've got an underwriting model or portfolio
+greeks calculation that take a while to compute, you can store the results upon
+the first run and when another user provides the same inputs, you can serve
+those right away.
+
+Perhaps you're working on a multiprocess app where the processes need to
+communicate with each other somehow. You can use Redis as the shared store
+instead of writing to/reading from disk. In other words, using it as an
+interprocess communication medium.
+
+Maybe you're debugging or monitoring (keeping an "audit trail" ;))
+a "real-time" app, like a plumber API that
+provides auto premium quotes or a market data service for your VA hedging desk
+and want a performant way to log events.
+
+A more fancy use case is if your model inputs are actually *in* Redis, and you
+want a streamlined way to score them instead of doing a bunch of ser/de via R
+or Python.
+
+In what follows, we'll talk in more detail about the latter two cases.
+
+# Le Unified Log
+
+Preferences in how to build logging infra are pretty personal. For every
+programming language there is a myraid of logging libraries and frameworks. As
+an example, for R, the `{logger}` project page[^1] provides a comprehensive (
+but probably non-exhaustive) list of packages for doing logging. Of course,
+since we're talking about Redis, we've created *yet another* logging package
+that uses Redis as a backend: `{slate}`[^2].
+
+[^1]: https://github.com/daroczig/logger#why-yet-another-logging-r-package
+[^2]: https://github.com/kevinykuo/slate
+
+Before looking at the package, let's take a step back and motivate the
+necessity of logging via a couple practical scenarios. Let's say we're a personal
+lines carrier and had implemented a model for auto and home premiums as an API
+that is being consumed by a customer-facing app. Depending on where we operate,
+we may be required to keep records of all quote requests and replies: the
+regulator may be interested in examining these records to ensure that we're
+following the approved rates and underwriting guidelines. As another example,
+let's say we maintain an internal interactive Shiny dashboard with P&L metrics
+and projections that communicates with various backend data systems in real time.
+If a user complains of an issue (likely of the intermittent variety and submitted
+without a reproducible example...), and we have the approximate time when the
+error occured, we can proceed with an investigation pretty quickly.
+
+OK, so logging is what the cool kids do and we wanna do it. In fact, I wonder if
+there's a parallel universe where some instrumentation with reasonable defaults
+come *built in* to the popular R application frameworks. Imagine if you deployed
+a plumber API or a Shiny app and got the logging for free? Anyway, sometimes we
+gotta work in life to have nice things, so here we are.
+
+Now, when we write log entries, where do they actually go? Most logging packages
+default to writing to a plain text file on the local file system. This might
+suffice if you just have one instance of the app running on one machine, but can
+quickly become gnarly when scaling up. How should we handle multiple processes
+attempting to write to the same log file simultaneously? What if the app instances
+are running on different machine or containers? What if we want multiple apps
+to write to the same log file? A relational database backend,
+like MySQL, is something we can consider using in order to ameliorate these
+issues, but it's not as performant as an in-memory server that supports streams
+natively when it comes to real-time monitoring.
+
+## Slate
+
+The slate package provides an example implementation of logging using Redis
+streams. The components are pretty simple: the `slate` object represents a
+Redis database, the `etch_*()` functions write log entries to the database,
+the `peruse()` function inspects the log, and the `gaze()` function prints
+events to the console as they come in.
+
+Here's a quick toy example:
+
+```{r include=FALSE}
+library(slate)
+sl <- slate(path = "/tmp/redis.sock")
+sl$rc$FLUSHALL()
+```
+
+```{r}
+library(slate)
+# Redis supports socket connections in addition to TCP/IP
+sl <- slate(path = "/tmp/redis.sock", default_app_id = "auto_quotes_1337")
+
+etch_info(sl, "Quote provided successfully", 
+          age = "28", sex = "M", make = "Tesla", 
+          model = "Model Y", premium = "420.69")
+etch_error(sl, "Unable to retrive mapping table!")
+peruse(sl)
+```
+
+Slate is pretty opinionated, but the core functionality can also be
+implemented as a custom backend in another logging package. If you build apps
+with R, I encourage you to check out logging with Redis!
+
+# Models in "production"
+
+If you've got an underwriting or fraud detection model built in TensorFlow or
+PyTorch and need to deploy it for real-time scoring, there are quite a few
+viable approaches, and the most appropriate one(s) depend on many things: your
+team's expertise, where the input data is coming from, where your predictions
+need to go, what tech keywords you want to put on your resume, etc. In many
+cases, wrapping the model in a plumber or Flask app isn't the worst idea, 
+even though it might not be the fastest. It works because 1) speed to "production"
+is valuable, and 2) if you're not counting milli- or microseconds, the extra latency
+introduced by using an interpreted language and doing ser/de doesn't matter
+that much.
+
+In other cases, latency is really important, and these are the times where you
+want to start thinking about things like doing the compute where the data is,
+and minimizing unnecessary movement of data among processes. This takes us to
+RedisAI, which allows the deployment of machine learning models in your Redis
+instance. Theoretically, this method of deployment can be faster than "native"
+approaches such as TensorFlow Serving and TorchServe, and obviously your "standard"
+plumber and Flask deployments. Let's now take a look at an example.
+
+## Training to deployment workflow
+
+Let's now build a bare bones model and deploy it to Redis. (We really do mean
+bare bones here, i.e., we're going to ignore all data science best practices
+in favor of shortening this reproducible example to have a model!) Our running
+example will be building a severity model for auto claims using torch. The code
+should be straightforward to those who are familiar with the torch API; for others,
+I recommend a quick skim through Sigrid Keydana's excellent introductory post[^4].
+
+[^4]: https://blogs.rstudio.com/ai/posts/2020-11-03-torch-tabular/
+
+We first grab some data from Cellar:
+
+```{r, message=FALSE}
+library(cellar)
+library(tidyverse)
+claims <- cellar_pull("fr_tpl2_claims")
+policies <- cellar_pull("fr_tpl2_policies")
+claims <- policies |>
+  left_join(claims, by = "policy_id") |>
+  filter(claim_amount > 0)
+
+# Just a couple predictors for this example
+claims <- claims |>
+  select(driver_age, area, claim_amount) |>
+  mutate(area = factor(area, levels = c("A", "B", "C", "D", "E", "F"))) |>
+  filter(!is.na(area))
+```
+
+Normalize predictors and create the dataset and dataloader:
+
+```{r}
+library(torch)
+age_mean <- mean(claims$driver_age)
+age_sd <- sd(claims$driver_age)
+
+claims_dataset <- dataset(
+  name = "claims_dataset",
+  initialize = function(data) {
+    self$xnum <- (as.double(data$driver_age) - age_mean) / age_sd
+    self$xcat <- as.integer(data$area)
+    self$y <- data$claim_amount
+  },
+  .getitem = function(i) {
+    xcat <- self$xcat[[i]] |>
+      torch_tensor(dtype = torch_long())
+    xnum <- self$xnum[[i]] |>
+      torch_tensor()
+    y <- self$y[[i]] |>
+      torch_tensor()
+
+    list(x = list(xcat, xnum), y = y)
+  },
+  .length = function() {
+    length(self$xcat)
+  }
+)
+
+ds <- claims_dataset(claims)
+dl <- dataloader(ds, batch_size = 1024, shuffle = TRUE)
+```
+
+Simple neural net with a couple feedforward layers:
+
+```{r}
+net <- nn_module(
+  "Net",
+  initialize = function() {
+    self$embed <- nn_embedding(6, 2)
+    self$linear1 <- nn_linear(3, 16)
+    self$linear2 <- nn_linear(16, 1)
+    self
+  },
+  forward = function(xcat, xnum) {
+    embed_out <- self$embed(xcat)$squeeze(2)
+    torch_cat(list(embed_out, xnum), dim = 2) |>
+      self$linear1() |>
+      nnf_relu() |>
+      self$linear2() |>
+      nnf_relu()
+  }
+)
+
+net1 <- net()
+
+optimizer <- optim_adam(net1$parameters, lr = 1)
+
+for (epoch in 1) {
+  net1$train()
+  train_losses <- c()
+
+  coro::loop(for (b in dl) {
+    optimizer$zero_grad()
+    output <- net1(b$x[[1]], b$x[[2]])
+    loss <- nnf_mse_loss(output, b$y)
+    loss$backward()
+    optimizer$step()
+    train_losses <- c(train_losses, loss$item())
+  })
+
+  cat(sprintf("Loss at epoch %d: training: %3f\n", epoch, mean(train_losses)))
+}
+```
+
+(Yes, the model performance is horrendous ;))
+
+Up until this point, we've done a vanilla model definition and training loop.
+The next bits are specific to model deployment. The documentation for the RedisAI
+commands can be found here[^5].
+
+[^5]: https://oss.redislabs.com/redisai/commands/
+
+First, we JIT (just-in-time) trace
+the model in order to serialize it into TorchScript module:
+
+```{r}
+net1$eval()
+
+# This is required for JIT tracing since the gradients are unnecessary
+for (p in net1$parameters) {
+  p$detach_()
+}
+
+# Define the scoring function
+my_fn <- function(x1, x2) {
+  net1(x1, x2)
+}
+
+test_input <- ds$.getitem(1)
+tr_fn <- jit_trace(my_fn, test_input$x[[1]], test_input$x[[2]]$unsqueeze(1))
+
+# Checking to see this works
+tr_fn(test_input$x[[1]], test_input$x[[2]]$unsqueeze(1))
+
+# Save to disk
+jit_save(tr_fn, "internal/net1.pt")
+```
+
+Next, we'll load the model into Redis:
+
+```{r}
+con <- file("internal/net1.pt", "rb", raw = TRUE)
+model_blob <- readBin(con, raw(), n = 100000L)
+rc$command(c("AI.MODELSTORE", "mymodel", "TORCH", "CPU", "BLOB", list(model_blob)))
+```
+
+At this point, the model is "deployed", and the client application can then
+interact with it given that it knows the key (`mymodel` in this case) and the
+scoring function signature. To complete the example, we'll continue to use R:
+
+```{r}
+# Integer encoded area variable
+rc$command(c("AI.TENSORSET", "x1", "INT8", 1, "VALUES", 4))
+
+# Normalized age variable
+rc$command(c("AI.TENSORSET", "x2", "FLOAT", 1, 1, "VALUES", 0.01))
+
+# Perform scoring and store the output in the `pred` key
+rc$command(c("AI.MODELEXECUTE", "mymodel", "INPUTS", 2, "x1", "x2", "OUTPUTS", 1, "pred"))
+
+# Retrieve the prediction for checking
+rc$command(c("AI.TENSORGET", "pred", "VALUES"))
+```
+
+# Wrapping up
+
+We've covered some diverse content in this post with the central theme of using
+Redis for insurance applications. While some of the technical details may seem
+distant from the core competencies of more traditional actuarial analysts, I've
+been a proponent of becoming familiar with adjacent technologies, if nothing else
+for easier interactions with MLOps teams and data engineers. Acknowledging that
+we glossed over some details, such as speeding through the torch bit, we plan to
+cover them in future blog posts. As always, if you're interested in contributing,
+please do reach out! :)

@@ -86,47 +86,41 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Kasa AI Blog: In Search of Yield in Imaginary Internet Money</title>
+<title>Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective</title>
 
-<meta property="description" itemprop="description" content="Intro to the Bitcoin cash-and-carry trade"/>
+<meta property="description" itemprop="description" content="Intro to Redis with examples in logging and ML deployment"/>
 
-<link rel="canonical" href="https://blog.kasa.ai/posts/btc-carry/"/>
+<link rel="canonical" href="https://blog.kasa.ai/posts/redis/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-06-16"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-06-16"/>
+<meta property="article:published" itemprop="datePublished" content="2021-06-29"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-06-29"/>
 <meta name="article:author" content="Kevin Kuo"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Kasa AI Blog: In Search of Yield in Imaginary Internet Money"/>
+<meta property="og:title" content="Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Intro to the Bitcoin cash-and-carry trade"/>
-<meta property="og:url" content="https://blog.kasa.ai/posts/btc-carry/"/>
-<meta property="og:image" content="https://blog.kasa.ai/posts/btc-carry/unnamed-chunk-3-1.png"/>
-<meta property="og:image:width" content="1248"/>
-<meta property="og:image:height" content="768"/>
+<meta property="og:description" content="Intro to Redis with examples in logging and ML deployment"/>
+<meta property="og:url" content="https://blog.kasa.ai/posts/redis/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Kasa AI Blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Kasa AI Blog: In Search of Yield in Imaginary Internet Money"/>
-<meta property="twitter:description" content="Intro to the Bitcoin cash-and-carry trade"/>
-<meta property="twitter:url" content="https://blog.kasa.ai/posts/btc-carry/"/>
-<meta property="twitter:image" content="https://blog.kasa.ai/posts/btc-carry/unnamed-chunk-3-1.png"/>
-<meta property="twitter:image:width" content="1248"/>
-<meta property="twitter:image:height" content="768"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective"/>
+<meta property="twitter:description" content="Intro to Redis with examples in logging and ML deployment"/>
+<meta property="twitter:url" content="https://blog.kasa.ai/posts/redis/"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","preview","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["In Search of Yield in Imaginary Internet Money"]},{"type":"character","attributes":{},"value":["Intro to the Bitcoin cash-and-carry trade"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-16-2021"]},{"type":"character","attributes":{},"value":["btc-carry"]},{"type":"character","attributes":{},"value":["unnamed-chunk-3-1.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/btc-carry/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R <3 Redis, from an insurance analytics perspective"]},{"type":"character","attributes":{},"value":["Intro to Redis with examples in logging and ML deployment"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-29-2021"]},{"type":"character","attributes":{},"value":["intro-redis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/redis/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["btc-carry_files/anchor-4.2.2/anchor.min.js","btc-carry_files/bowser-1.9.3/bowser.min.js","btc-carry_files/distill-2.2.21/template.v2.js","btc-carry_files/figure-html5/unnamed-chunk-3-1.png","btc-carry_files/header-attrs-2.8/header-attrs.js","btc-carry_files/jquery-1.11.3/jquery.min.js","btc-carry_files/popper-2.6.0/popper.min.js","btc-carry_files/tippy-6.2.7/tippy-bundle.umd.min.js","btc-carry_files/tippy-6.2.7/tippy-light-border.css","btc-carry_files/tippy-6.2.7/tippy.css","btc-carry_files/tippy-6.2.7/tippy.umd.min.js","btc-carry_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-3-1.png"]}
+  {"type":"character","attributes":{},"value":["internal/net1.pt","redis_files/anchor-4.2.2/anchor.min.js","redis_files/bowser-1.9.3/bowser.min.js","redis_files/distill-2.2.21/template.v2.js","redis_files/header-attrs-2.8/header-attrs.js","redis_files/jquery-1.11.3/jquery.min.js","redis_files/popper-2.6.0/popper.min.js","redis_files/tippy-6.2.7/tippy-bundle.umd.min.js","redis_files/tippy-6.2.7/tippy-light-border.css","redis_files/tippy-6.2.7/tippy.css","redis_files/tippy-6.2.7/tippy.umd.min.js","redis_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2085,7 +2079,7 @@ gtag('config', 'UA-130804330-2');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"In Search of Yield in Imaginary Internet Money","description":"Intro to the Bitcoin cash-and-carry trade","authors":[{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio, Kasa AI","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-16T00:00:00.000+00:00","citationText":"Kuo, 2021"}
+{"title":"R <3 Redis, from an insurance analytics perspective","description":"Intro to Redis with examples in logging and ML deployment","authors":[{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio, Kasa AI","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-29T00:00:00.000+00:00","citationText":"Kuo, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2114,166 +2108,251 @@ gtag('config', 'UA-130804330-2');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>In Search of Yield in Imaginary Internet Money</h1>
+<h1>R &lt;3 Redis, from an insurance analytics perspective</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Intro to the Bitcoin cash-and-carry trade</p></p>
+<p><p>Intro to Redis with examples in logging and ML deployment</p></p>
 </div>
 
 <div class="d-byline">
   Kevin Kuo  (RStudio, Kasa AI)
   
-<br/>06-16-2021
+<br/>06-29-2021
 </div>
 
 <div class="d-article">
-<p>While most of the content on this blog has focused on the liabilities side of the balance sheet of insurers, in this post we take a look at the asset side of things, through a trendy lens!</p>
-<p>Of course, none of what follow is financial/investments/trading advice :)</p>
-<h1 id="much-wow-and-boomercoin">Much wow and Boomercoin</h1>
-<p>While Dog Money has been popular on TikTok lately and pretty much established itself as an asset class, the OG, Bitcoin, has also captured a respectable share of headlines. Regardless of what you think of cryptocurrencies in general (whether it’s all a massive scam or the future of France), it’s probably worth keeping an eye on as a professional in the insurance industry. While MicroStrategy (MacroStrategy?) and Tesla, which is getting more and more involved with insurance, have been more vocal about Bitcoin, some traditional insurers have quietly added it to their balance sheets<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<h1 id="getting-that-yield">Getting that yield</h1>
-<p>One way to take advantage of an appreciating asset is to simply have it on your balance sheet and watch it go up (relative to your currency of denomination), but sometimes things aren’t up only, and you might end up under water, possibly very deeply so. A casual -30% drawdown isn’t a great look if you’re trying to be a steady, conservative insurer.</p>
-<p>How do we incorporate Bitcoin into our asset strategy, then, if we don’t want to be subjected to the wild swings in quarterly investments PnL? If you took a look at a random insurer’s balance sheet, you’d probably that bonds and other fixed income products take up at least half of the assets. Bonds are great from an insurance company’s perspective. For the most part, you know what you’ll be getting, and when you’ll be getting them. The issue with low interest rate environments, like the one we’re in now, though, is that while you still know what you’ll be getting, you know you’re not gonna be getting very much.</p>
-<p>What if we could take a trade with Bitcoin that behaves like a bond but with better yield? For portfolio managers at insurers who still feel a bit iffy about crypto, something like this might be a more interesting starting point for discussion.</p>
-<h1 id="the-most-obvious-trade">The most obvious trade</h1>
-<p>Indeed, I’m talking about the BTC cash-and-carry trade, which is arguably the most popular and important trade in the space<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. For the benefit of practitioners who don’t work with investments regularly, and actuaries who took the FM/MFE exams a few too many years ago, let’s take this apart in detail.</p>
-<h2 id="futures">Futures</h2>
-<p>A future contract is an agreement to buy or sell a particular asset at some predetermined time in the future. These contracts can be settled via physical delivery or be cash settled. As an example of the former, if you’re long (bought) a contract of live cattle futures on the day it expires, you have to show up at the livestock yard at the preset time with enough trucks to take delivery of your ~30 heads of cattle. Futures for Bitcoin tend to be of the latter type, i.e., instead of exchanging actual Bitcoins with your counterparty, you receive or pay the price difference of BTC at expiration relative to when you entered into the contract.</p>
-<h2 id="contango">Contango</h2>
-<p>Bitcoin futures trade on various exchanges and come in different flavors. As a first example, we’ll take a look at Bybit. While one can look up prices on the Web UI, all exchanges offer API access, which we’ll get used to working with now, to enable more systematic data gathering in future posts.</p>
-<p>Our first order of business is to grab the identifiers of the futures contracts and their prices from the exchange.</p>
+<p>Every once in a while I play with a new open source project and think “wow I can’t believe this **** is free”. The most recent such discovery for me is Redis, which is advertised as an “in-memory data structure store”. So basically we can store things like strings, lists, hashes, etc., <em>in memory</em>, and retrieve them. It is exactly like what you’d expect:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://httr.r-lib.org/'>httr</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/richfitz/redux'>redux</a></span><span class='op'>)</span>
+<span class='va'>rc</span> <span class='op'>&lt;-</span> <span class='fu'>redux</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/redux/man/hiredis.html'>hiredis</a></span><span class='op'>(</span>host <span class='op'>=</span> <span class='st'>"localhost"</span>, port <span class='op'>=</span> <span class='st'>"6379"</span><span class='op'>)</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>SET</span><span class='op'>(</span><span class='st'>"foo"</span>, <span class='st'>"bar"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[Redis: OK]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>rc</span><span class='op'>$</span><span class='fu'>GET</span><span class='op'>(</span><span class='st'>"foo"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;bar&quot;</code></pre>
+</div>
+<p>Here, we’ve used the redux package<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> which provides an R interface to the C Redis client.</p>
+<h1 id="but-why">But Why?</h1>
+<p>Okay. Cool. But how does that help me, a data scientist/engineer using R?</p>
+<p>If you develop Shiny apps, one natural way to utilize Redis is its most common use case – as a cache. Maybe you’ve got an underwriting model or portfolio greeks calculation that take a while to compute, you can store the results upon the first run and when another user provides the same inputs, you can serve those right away.</p>
+<p>Perhaps you’re working on a multiprocess app where the processes need to communicate with each other somehow. You can use Redis as the shared store instead of writing to/reading from disk. In other words, using it as an interprocess communication medium.</p>
+<p>Maybe you’re debugging or monitoring (keeping an “audit trail” ;)) a “real-time” app, like a plumber API that provides auto premium quotes or a market data service for your VA hedging desk and want a performant way to log events.</p>
+<p>A more fancy use case is if your model inputs are actually <em>in</em> Redis, and you want a streamlined way to score them instead of doing a bunch of ser/de via R or Python.</p>
+<p>In what follows, we’ll talk in more detail about the latter two cases.</p>
+<h1 id="le-unified-log">Le Unified Log</h1>
+<p>Preferences in how to build logging infra are pretty personal. For every programming language there is a myraid of logging libraries and frameworks. As an example, for R, the <code>{logger}</code> project page<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> provides a comprehensive ( but probably non-exhaustive) list of packages for doing logging. Of course, since we’re talking about Redis, we’ve created <em>yet another</em> logging package that uses Redis as a backend: <code>{slate}</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Before looking at the package, let’s take a step back and motivate the necessity of logging via a couple practical scenarios. Let’s say we’re a personal lines carrier and had implemented a model for auto and home premiums as an API that is being consumed by a customer-facing app. Depending on where we operate, we may be required to keep records of all quote requests and replies: the regulator may be interested in examining these records to ensure that we’re following the approved rates and underwriting guidelines. As another example, let’s say we maintain an internal interactive Shiny dashboard with P&amp;L metrics and projections that communicates with various backend data systems in real time. If a user complains of an issue (likely of the intermittent variety and submitted without a reproducible example…), and we have the approximate time when the error occured, we can proceed with an investigation pretty quickly.</p>
+<p>OK, so logging is what the cool kids do and we wanna do it. In fact, I wonder if there’s a parallel universe where some instrumentation with reasonable defaults come <em>built in</em> to the popular R application frameworks. Imagine if you deployed a plumber API or a Shiny app and got the logging for free? Anyway, sometimes we gotta work in life to have nice things, so here we are.</p>
+<p>Now, when we write log entries, where do they actually go? Most logging packages default to writing to a plain text file on the local file system. This might suffice if you just have one instance of the app running on one machine, but can quickly become gnarly when scaling up. How should we handle multiple processes attempting to write to the same log file simultaneously? What if the app instances are running on different machine or containers? What if we want multiple apps to write to the same log file? A relational database backend, like MySQL, is something we can consider using in order to ameliorate these issues, but it’s not as performant as an in-memory server that supports streams natively when it comes to real-time monitoring.</p>
+<h2 id="slate">Slate</h2>
+<p>The slate package provides an example implementation of logging using Redis streams. The components are pretty simple: the <code>slate</code> object represents a Redis database, the <code>etch_*()</code> functions write log entries to the database, the <code>peruse()</code> function inspects the log, and the <code>gaze()</code> function prints events to the console as they come in.</p>
+<p>Here’s a quick toy example:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>slate</span><span class='op'>)</span>
+<span class='co'># Redis supports socket connections in addition to TCP/IP</span>
+<span class='va'>sl</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/slate/man/slate.html'>slate</a></span><span class='op'>(</span>path <span class='op'>=</span> <span class='st'>"/tmp/redis.sock"</span>, default_app_id <span class='op'>=</span> <span class='st'>"auto_quotes_1337"</span><span class='op'>)</span>
+
+<span class='fu'>etch_info</span><span class='op'>(</span><span class='va'>sl</span>, <span class='st'>"Quote provided successfully"</span>, 
+          age <span class='op'>=</span> <span class='st'>"28"</span>, sex <span class='op'>=</span> <span class='st'>"M"</span>, make <span class='op'>=</span> <span class='st'>"Tesla"</span>, 
+          model <span class='op'>=</span> <span class='st'>"Model Y"</span>, premium <span class='op'>=</span> <span class='st'>"420.69"</span><span class='op'>)</span>
+<span class='fu'>etch_error</span><span class='op'>(</span><span class='va'>sl</span>, <span class='st'>"Unable to retrive mapping table!"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/slate/man/peruse.html'>peruse</a></span><span class='op'>(</span><span class='va'>sl</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>2021-07-01 14:30:09.790 ERROR [auto_quotes_1337] Unable to retrive mapping table! 
+2021-07-01 14:30:09.789 INFO [auto_quotes_1337] Quote provided successfully age=28 sex=M make=Tesla model=Model Y premium=420.69</code></pre>
+</div>
+<p>Slate is pretty opinionated, but the core functionality can also be implemented as a custom backend in another logging package. If you build apps with R, I encourage you to check out logging with Redis!</p>
+<h1 id="models-in-production">Models in “production”</h1>
+<p>If you’ve got an underwriting or fraud detection model built in TensorFlow or PyTorch and need to deploy it for real-time scoring, there are quite a few viable approaches, and the most appropriate one(s) depend on many things: your team’s expertise, where the input data is coming from, where your predictions need to go, what tech keywords you want to put on your resume, etc. In many cases, wrapping the model in a plumber or Flask app isn’t the worst idea, even though it might not be the fastest. It works because 1) speed to “production” is valuable, and 2) if you’re not counting milli- or microseconds, the extra latency introduced by using an interpreted language and doing ser/de doesn’t matter that much.</p>
+<p>In other cases, latency is really important, and these are the times where you want to start thinking about things like doing the compute where the data is, and minimizing unnecessary movement of data among processes. This takes us to RedisAI, which allows the deployment of machine learning models in your Redis instance. Theoretically, this method of deployment can be faster than “native” approaches such as TensorFlow Serving and TorchServe, and obviously your “standard” plumber and Flask deployments. Let’s now take a look at an example.</p>
+<h2 id="training-to-deployment-workflow">Training to deployment workflow</h2>
+<p>Let’s now build a bare bones model and deploy it to Redis. (We really do mean bare bones here, i.e., we’re going to ignore all data science best practices in favor of shortening this reproducible example to have a model!) Our running example will be building a severity model for auto claims using torch. The code should be straightforward to those who are familiar with the torch API; for others, I recommend a quick skim through Sigrid Keydana’s excellent introductory post<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>We first grab some data from Cellar:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>cellar</span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-<span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.bybit.com/v2/public/symbols"</span><span class='op'>)</span> |&gt; 
-  <span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>futures_symbols</span> <span class='op'>&lt;-</span> <span class='va'>r</span><span class='op'>$</span><span class='va'>result</span> |&gt; 
-  <span class='fu'>keep</span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>r"(BTCUSD.+\d$)"</span>, <span class='va'>x</span><span class='op'>$</span><span class='va'>alias</span><span class='op'>)</span><span class='op'>)</span> |&gt; 
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/stats/setNames.html'>setNames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>$</span><span class='va'>name</span>, <span class='va'>x</span><span class='op'>$</span><span class='va'>alias</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>futures_symbols</span>
+<span class='va'>claims</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/cellar/man/cellar_pull.html'>cellar_pull</a></span><span class='op'>(</span><span class='st'>"fr_tpl2_claims"</span><span class='op'>)</span>
+<span class='va'>policies</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/cellar/man/cellar_pull.html'>cellar_pull</a></span><span class='op'>(</span><span class='st'>"fr_tpl2_policies"</span><span class='op'>)</span>
+<span class='va'>claims</span> <span class='op'>&lt;-</span> <span class='va'>policies</span> |&gt;
+  <span class='fu'>left_join</span><span class='op'>(</span><span class='va'>claims</span>, by <span class='op'>=</span> <span class='st'>"policy_id"</span><span class='op'>)</span> |&gt;
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>claim_amount</span> <span class='op'>&gt;</span> <span class='fl'>0</span><span class='op'>)</span>
+
+<span class='co'># Just a couple predictors for this example</span>
+<span class='va'>claims</span> <span class='op'>&lt;-</span> <span class='va'>claims</span> |&gt;
+  <span class='fu'>select</span><span class='op'>(</span><span class='va'>driver_age</span>, <span class='va'>area</span>, <span class='va'>claim_amount</span><span class='op'>)</span> |&gt;
+  <span class='fu'>mutate</span><span class='op'>(</span>area <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>area</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span>, <span class='st'>"D"</span>, <span class='st'>"E"</span>, <span class='st'>"F"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> |&gt;
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>area</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code> BTCUSD1231  BTCUSD0924  BTCUSD0625 
-&quot;BTCUSDZ21&quot; &quot;BTCUSDU21&quot; &quot;BTCUSDM21&quot; </code></pre>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>futures_prices</span> <span class='op'>&lt;-</span> <span class='va'>futures_symbols</span> |&gt; 
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span>\<span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span>
-    <span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.bybit.com/v2/public/tickers"</span>, query <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>symbol <span class='op'>=</span> <span class='va'>x</span><span class='op'>)</span><span class='op'>)</span> |&gt; 
-      <span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='op'>)</span>
-    <span class='va'>r</span><span class='op'>$</span><span class='va'>result</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>$</span><span class='va'>last_price</span>
-  <span class='op'>}</span><span class='op'>)</span> |&gt; 
-  <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='op'>)</span> |&gt; 
-  <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='fu'>everything</span><span class='op'>(</span><span class='op'>)</span>, values_to <span class='op'>=</span> <span class='st'>"price"</span><span class='op'>)</span>
-
-<span class='va'>futures_prices</span>
-</code></pre>
 </div>
-<pre><code># A tibble: 3 x 2
-  name       price   
-  &lt;chr&gt;      &lt;chr&gt;   
-1 BTCUSD1231 40180.50
-2 BTCUSD0924 39371.00
-3 BTCUSD0625 38559.50</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<p>Here, the numbers after <code>BTCUSD</code> denote the dates of expiration, so <code>0625</code> means June 25th, and <code>1231</code> means December 31st.</p>
-<p>Let’s next plot the current prices of each contract.</p>
+<p>Normalize predictors and create the dataset and dataloader:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
-<span class='va'>futures_prices</span> |&gt; 
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>name</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>price</span>, group <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"symbol"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://torch.mlverse.org/docs'>torch</a></span><span class='op'>)</span>
+<span class='va'>age_mean</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>claims</span><span class='op'>$</span><span class='va'>driver_age</span><span class='op'>)</span>
+<span class='va'>age_sd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>claims</span><span class='op'>$</span><span class='va'>driver_age</span><span class='op'>)</span>
+
+<span class='va'>claims_dataset</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/dataset.html'>dataset</a></span><span class='op'>(</span>
+  name <span class='op'>=</span> <span class='st'>"claims_dataset"</span>,
+  initialize <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>xnum</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/double.html'>as.double</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>driver_age</span><span class='op'>)</span> <span class='op'>-</span> <span class='va'>age_mean</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>age_sd</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>xcat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>area</span><span class='op'>)</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>data</span><span class='op'>$</span><span class='va'>claim_amount</span>
+  <span class='op'>}</span>,
+  .getitem <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>i</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>xcat</span> <span class='op'>&lt;-</span> <span class='va'>self</span><span class='op'>$</span><span class='va'>xcat</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> |&gt;
+      <span class='fu'><a href='https://torch.mlverse.org/docs/reference/torch_tensor.html'>torch_tensor</a></span><span class='op'>(</span>dtype <span class='op'>=</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/torch_dtype.html'>torch_long</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>xnum</span> <span class='op'>&lt;-</span> <span class='va'>self</span><span class='op'>$</span><span class='va'>xnum</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> |&gt;
+      <span class='fu'><a href='https://torch.mlverse.org/docs/reference/torch_tensor.html'>torch_tensor</a></span><span class='op'>(</span><span class='op'>)</span>
+    <span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>self</span><span class='op'>$</span><span class='va'>y</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> |&gt;
+      <span class='fu'><a href='https://torch.mlverse.org/docs/reference/torch_tensor.html'>torch_tensor</a></span><span class='op'>(</span><span class='op'>)</span>
+
+    <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>xcat</span>, <span class='va'>xnum</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>y</span><span class='op'>)</span>
+  <span class='op'>}</span>,
+  .length <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>self</span><span class='op'>$</span><span class='va'>xcat</span><span class='op'>)</span>
+  <span class='op'>}</span>
+<span class='op'>)</span>
+
+<span class='va'>ds</span> <span class='op'>&lt;-</span> <span class='fu'>claims_dataset</span><span class='op'>(</span><span class='va'>claims</span><span class='op'>)</span>
+<span class='va'>dl</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/dataloader.html'>dataloader</a></span><span class='op'>(</span><span class='va'>ds</span>, batch_size <span class='op'>=</span> <span class='fl'>1024</span>, shuffle <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="btc-carry_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
-<p>We see that the “curve” is upwards sloping, and the fancy finance term for this is <em>contango</em> (its opposite, where the slope is down, is called <em>backwardation</em>). The reasons for this behavior is manifold and we won’t delve into them here, but a reasonable first approximation is that the world wants to be net long BTC, and is willing to pay a premium to do so.</p>
-<h2 id="the-trade">The Trade</h2>
-<p>Now let’s take a look at the price of Bitcoin. Since Bybit is a purely derivatives exchange, we need to look elsewhere for spot (i.e. actual Bitcoin) prices. Again, arbitrarily picking an exchange for this example, we’ll look at Coinbase:</p>
+<p>Simple neural net with a couple feedforward layers:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://httr.r-lib.org/reference/GET.html'>GET</a></span><span class='op'>(</span><span class='st'>"https://api.pro.coinbase.com/products/BTC-USD/book"</span><span class='op'>)</span>
-<span class='fu'><a href='https://httr.r-lib.org/reference/content.html'>content</a></span><span class='op'>(</span><span class='va'>r</span><span class='op'>)</span> |&gt; <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nn_module.html'>nn_module</a></span><span class='op'>(</span>
+  <span class='st'>"Net"</span>,
+  initialize <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>embed</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nn_embedding.html'>nn_embedding</a></span><span class='op'>(</span><span class='fl'>6</span>, <span class='fl'>2</span><span class='op'>)</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>linear1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nn_linear.html'>nn_linear</a></span><span class='op'>(</span><span class='fl'>3</span>, <span class='fl'>16</span><span class='op'>)</span>
+    <span class='va'>self</span><span class='op'>$</span><span class='va'>linear2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nn_linear.html'>nn_linear</a></span><span class='op'>(</span><span class='fl'>16</span>, <span class='fl'>1</span><span class='op'>)</span>
+    <span class='va'>self</span>
+  <span class='op'>}</span>,
+  forward <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>xcat</span>, <span class='va'>xnum</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>embed_out</span> <span class='op'>&lt;-</span> <span class='va'>self</span><span class='op'>$</span><span class='fu'>embed</span><span class='op'>(</span><span class='va'>xcat</span><span class='op'>)</span><span class='op'>$</span><span class='fu'>squeeze</span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://torch.mlverse.org/docs/reference/torch_cat.html'>torch_cat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>embed_out</span>, <span class='va'>xnum</span><span class='op'>)</span>, dim <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> |&gt;
+      <span class='va'>self</span><span class='op'>$</span><span class='fu'>linear1</span><span class='op'>(</span><span class='op'>)</span> |&gt;
+      <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nnf_relu.html'>nnf_relu</a></span><span class='op'>(</span><span class='op'>)</span> |&gt;
+      <span class='va'>self</span><span class='op'>$</span><span class='fu'>linear2</span><span class='op'>(</span><span class='op'>)</span> |&gt;
+      <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nnf_relu.html'>nnf_relu</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='op'>}</span>
+<span class='op'>)</span>
+
+<span class='va'>net1</span> <span class='op'>&lt;-</span> <span class='fu'>net</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>optimizer</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/optim_adam.html'>optim_adam</a></span><span class='op'>(</span><span class='va'>net1</span><span class='op'>$</span><span class='va'>parameters</span>, lr <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>epoch</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>net1</span><span class='op'>$</span><span class='fu'>train</span><span class='op'>(</span><span class='op'>)</span>
+  <span class='va'>train_losses</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>)</span>
+
+  <span class='fu'>coro</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/coro/man/collect.html'>loop</a></span><span class='op'>(</span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>b</span> <span class='kw'>in</span> <span class='va'>dl</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>optimizer</span><span class='op'>$</span><span class='fu'>zero_grad</span><span class='op'>(</span><span class='op'>)</span>
+    <span class='va'>output</span> <span class='op'>&lt;-</span> <span class='fu'>net1</span><span class='op'>(</span><span class='va'>b</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span>, <span class='va'>b</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+    <span class='va'>loss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/nnf_mse_loss.html'>nnf_mse_loss</a></span><span class='op'>(</span><span class='va'>output</span>, <span class='va'>b</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+    <span class='va'>loss</span><span class='op'>$</span><span class='fu'>backward</span><span class='op'>(</span><span class='op'>)</span>
+    <span class='va'>optimizer</span><span class='op'>$</span><span class='fu'>step</span><span class='op'>(</span><span class='op'>)</span>
+    <span class='va'>train_losses</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>train_losses</span>, <span class='va'>loss</span><span class='op'>$</span><span class='fu'>item</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>}</span><span class='op'>)</span>
+
+  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sprintf.html'>sprintf</a></span><span class='op'>(</span><span class='st'>"Loss at epoch %d: training: %3f\n"</span>, <span class='va'>epoch</span>, <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>train_losses</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
 </code></pre>
 </div>
-<pre><code>List of 3
- $ bids    :List of 1
-  ..$ :List of 3
-  .. ..$ : chr &quot;38577.54&quot;
-  .. ..$ : chr &quot;0.36569759&quot;
-  .. ..$ : int 3
- $ asks    :List of 1
-  ..$ :List of 3
-  .. ..$ : chr &quot;38577.55&quot;
-  .. ..$ : chr &quot;0.03182631&quot;
-  .. ..$ : int 2
- $ sequence: num 2.65e+10</code></pre>
+<pre><code>Loss at epoch 1: training: 874589761.692308</code></pre>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<p>This shows that we can buy BTC at a rate of 1 Bitcoin for $38,577.55 United States Dollars. This is, of course, a bit lower than the $40,180.5 we saw earlier for the BTCUSD December 31st futures on Bybit. Even for those of us new to this, we can start go guess what the trade could look like: Buy some BTC from Coinbase, and at the same time sell the 12/31 futures, and we should somehow capture the ~$1,602.95 difference. And, indeed, modulo some logistical details, that’s in fact what we’d execute!</p>
-<ol type="1">
-<li>Borrow $<span class="math inline">\(q_S\)</span>.</li>
-<li>Buy $<span class="math inline">\(q_S\)</span> worth of BTC on Coinbase.</li>
-<li>Deposit the coins on Bybit, and sell some (specifically, $<span class="math inline">\(q_F\)</span> worth) of 12/31 BTCUSD futures.</li>
-<li>Wait until 12/31 when the futures position expires.</li>
-<li>Move the BTC to Coinbase and sell it for USD.</li>
-</ol>
-<p>Let’s now calculate how much dough we can make (if any at all!). Since we’ve got a mathematicall inclined readership on this blog, we’ll try to compute the PnL in general. To do that, first some more notation. We’ll denote by <span class="math inline">\(p_S\)</span> the current spot price of BTC, <span class="math inline">\(p_F\)</span> the price of the 12/31 futures contract, and <span class="math inline">\(p_T\)</span> the (as of now unknown) price of Bitcoin on 12/31.</p>
-<p>The PnL on the spot purchase is straightforward:</p>
-<p><span class="math display">\[
-\text{PnL}_{S} = \frac{q_S}{p_S}(p_T - p_S).
-\]</span> The futures contract, on the other hand, may seem a bit weird for those who are used to traditional finance products. On Bybit, the futures have “inverse” payoff and are “coin margined”. The latter means that you post collateral in BTC and receive/pay PnL in BTC. The inverse bit means the PnL is calculated off percentage moves rather than linearly, in other words, the PnL in BTC is</p>
-<p><span class="math display">\[
-q_F(\frac{1}{p_T} - \frac{1}{p_F}).
-\]</span> To get this in dollar terms, we would need to multiply by the BTC/USD exchange rate at expiry, so that</p>
-<p><span class="math display">\[
-\text{PnL}_F = q_F(\frac{1}{p_T} - \frac{1}{p_F}) \times p_T,
-\]</span></p>
-<p>and we have the PnL for the trade coming out to be, with a little bit of algebra,</p>
-<p><span class="math display">\[
-\text{PnL} = \frac{q_S}{p_S}(p_T - p_S) + \frac{q_F}{p_F}(p_F - p_T).
-\]</span></p>
-<p>Now, if we sell just the right number <span class="math inline">\(q_F\)</span> of contracts, we can make the <span class="math inline">\(p_T\)</span> term go away, effectively removing our exposure to BTC price movements. As my calculus instructor from college would say, <em>by inspection</em>, we choose <span class="math inline">\(q_F = q_S\frac{p_F}{p_S}\)</span>, and end up with</p>
-<p><span class="math display">\[
-\text{PnL} = \frac{q_S}{p_S}(p_F - p_S).
-\]</span> Hence, we’ve come up with a bond that’s going to pay us a yield of <span class="math inline">\((p_F - p_S) / p_S\)</span>.</p>
-<p>This corresponds to an annualized yield of</p>
+<p>(Yes, the model performance is horrendous ;))</p>
+<p>Up until this point, we’ve done a vanilla model definition and training loop. The next bits are specific to model deployment. The documentation for the RedisAI commands can be found here<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<p>First, we JIT (just-in-time) trace the model in order to serialize it into TorchScript module:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>days_to_maturity</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fu'>lubridate</span><span class='fu'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/as_date.html'>as_date</a></span><span class='op'>(</span><span class='st'>"2021-12-31"</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'>lubridate</span><span class='fu'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/now.html'>today</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fl'>365</span> <span class='op'>/</span> <span class='va'>days_to_maturity</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>p_F</span> <span class='op'>-</span> <span class='va'>p_S</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>p_S</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net1</span><span class='op'>$</span><span class='fu'>eval</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='co'># This is required for JIT tracing since the gradients are unnecessary</span>
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>p</span> <span class='kw'>in</span> <span class='va'>net1</span><span class='op'>$</span><span class='va'>parameters</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>p</span><span class='op'>$</span><span class='fu'>detach_</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+<span class='co'># Define the scoring function</span>
+<span class='va'>my_fn</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x1</span>, <span class='va'>x2</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'>net1</span><span class='op'>(</span><span class='va'>x1</span>, <span class='va'>x2</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+<span class='va'>test_input</span> <span class='op'>&lt;-</span> <span class='va'>ds</span><span class='op'>$</span><span class='fu'>.getitem</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='va'>tr_fn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://torch.mlverse.org/docs/reference/jit_trace.html'>jit_trace</a></span><span class='op'>(</span><span class='va'>my_fn</span>, <span class='va'>test_input</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span>, <span class='va'>test_input</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>$</span><span class='fu'>unsqueeze</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'># Checking to see this works</span>
+<span class='fu'>tr_fn</span><span class='op'>(</span><span class='va'>test_input</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span>, <span class='va'>test_input</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>$</span><span class='fu'>unsqueeze</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 0.07659722</code></pre>
+<pre><code>torch_tensor
+ 2513.5664
+[ CPUFloatType{1,1} ]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Save to disk</span>
+<span class='fu'><a href='https://torch.mlverse.org/docs/reference/jit_save.html'>jit_save</a></span><span class='op'>(</span><span class='va'>tr_fn</span>, <span class='st'>"internal/net1.pt"</span><span class='op'>)</span>
+</code></pre>
 </div>
+</div>
+<p>Next, we’ll load the model into Redis:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>con</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/connections.html'>file</a></span><span class='op'>(</span><span class='st'>"internal/net1.pt"</span>, <span class='st'>"rb"</span>, raw <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>model_blob</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readBin.html'>readBin</a></span><span class='op'>(</span><span class='va'>con</span>, <span class='fu'><a href='https://rdrr.io/r/base/raw.html'>raw</a></span><span class='op'>(</span><span class='op'>)</span>, n <span class='op'>=</span> <span class='fl'>100000L</span><span class='op'>)</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>command</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"AI.MODELSTORE"</span>, <span class='st'>"mymodel"</span>, <span class='st'>"TORCH"</span>, <span class='st'>"CPU"</span>, <span class='st'>"BLOB"</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>model_blob</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
 </div>
-<p>How does 7.66% stack up with the junk bonds held by your company?</p>
-<h1 id="risks">Risks</h1>
-<p>OK, so what’s the catch?</p>
-<p>The biggest issue is probably actually convincing the asset management team that this isn’t a scam, and working through regulatory considerations, e.g., after taking into account risk capital required to put on the trade, is the net yield still reasonable?</p>
-<p>On the trade itself, the three main considerations are mark-to-market risk, exchange counterparty risk, and execution risk.</p>
-<p>While we know that, on 12/31, the futures price is going to be about equal to the spot price, the market could move against us between now and then. The basis, or spread between futures and spot, is currently $1,602.95, but it could widen to, say, $3,000 or more, before they converge on expiration. Depending on how risk management parameters are set up, this could be problematic.</p>
-<p>When you deposit your Bitcoin on an exchange, there is always a chance, however small, that it randomly shuts down and you never see your coins again. To mitigate this, you could spread your trade out on several exchanges, and also utilize leverage so that you don’t have to deposit the full amount of the trade. If leverage is employed, you’ll have to keep an eye on the margin requirements in case the futures trade goes against you, and post additional collateral lest you get liquidated, or be forced to close your position.</p>
-<p>Finally, another consideration is that of execution risk. If we’re putting a $10,000 trade on, the market impact is minimal. However, if we’re instead doing $10 million, slippage can start becoming an issue if we’re not careful. If we’re holding the position until the literal second of expiration, we’ll also need to be mindful of the futures contract settlement mechanism, which differs from exchange to exchange, but all involve taking some sort of time weighted average of the prices for a period of time before expiration.</p>
-<h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>
-<p>In this post, we provide a gentle intro to crypto via the BTC cash-and-carry trade. In future posts, we’ll look into other venues that could potentially be incorporated into an investment strategy, and explore how more advanced analytics can be utilized to analyze risk.</p>
-<p>Also, if you’re a crypto enthusiast working in insurance and have thoughts to share, please reach out!</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<pre><code>[Redis: OK]</code></pre>
+</div>
+<p>At this point, the model is “deployed”, and the client application can then interact with it given that it knows the key (<code>mymodel</code> in this case) and the scoring function signature. To complete the example, we’ll continue to use R:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Integer encoded area variable</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>command</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"AI.TENSORSET"</span>, <span class='st'>"x1"</span>, <span class='st'>"INT8"</span>, <span class='fl'>1</span>, <span class='st'>"VALUES"</span>, <span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[Redis: OK]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Normalized age variable</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>command</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"AI.TENSORSET"</span>, <span class='st'>"x2"</span>, <span class='st'>"FLOAT"</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='st'>"VALUES"</span>, <span class='fl'>0.01</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[Redis: OK]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Perform scoring and store the output in the `pred` key</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>command</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"AI.MODELEXECUTE"</span>, <span class='st'>"mymodel"</span>, <span class='st'>"INPUTS"</span>, <span class='fl'>2</span>, <span class='st'>"x1"</span>, <span class='st'>"x2"</span>, <span class='st'>"OUTPUTS"</span>, <span class='fl'>1</span>, <span class='st'>"pred"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[Redis: OK]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Retrieve the prediction for checking</span>
+<span class='va'>rc</span><span class='op'>$</span><span class='fu'>command</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"AI.TENSORGET"</span>, <span class='st'>"pred"</span>, <span class='st'>"VALUES"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[[1]]
+[1] &quot;2269.17724609375&quot;</code></pre>
+</div>
+<h1 id="wrapping-up">Wrapping up</h1>
+<p>We’ve covered some diverse content in this post with the central theme of using Redis for insurance applications. While some of the technical details may seem distant from the core competencies of more traditional actuarial analysts, I’ve been a proponent of becoming familiar with adjacent technologies, if nothing else for easier interactions with MLOps teams and data engineers. Acknowledging that we glossed over some details, such as speeding through the torch bit, we plan to cover them in future blog posts. As always, if you’re interested in contributing, please do reach out! :)</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p><a href="https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/several-us-insurers-begin-to-dabble-with-cryptocurrency-investments-in-q1-64884124" class="uri">https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/several-us-insurers-begin-to-dabble-with-cryptocurrency-investments-in-q1-64884124</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p><a href="https://cryptohayes.medium.com/all-aboard-4d50435190d6" class="uri">https://cryptohayes.medium.com/all-aboard-4d50435190d6</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p><a href="https://github.com/richfitz/redux" class="uri">https://github.com/richfitz/redux</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><a href="https://github.com/daroczig/logger#why-yet-another-logging-r-package" class="uri">https://github.com/daroczig/logger#why-yet-another-logging-r-package</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><a href="https://github.com/kevinykuo/slate" class="uri">https://github.com/kevinykuo/slate</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p><a href="https://blogs.rstudio.com/ai/posts/2020-11-03-torch-tabular/" class="uri">https://blogs.rstudio.com/ai/posts/2020-11-03-torch-tabular/</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p><a href="https://oss.redislabs.com/redisai/commands/" class="uri">https://oss.redislabs.com/redisai/commands/</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->
@@ -2283,15 +2362,6 @@ q_F(\frac{1}{p_T} - \frac{1}{p_F}).
 <div class="d-appendix">
 </div>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

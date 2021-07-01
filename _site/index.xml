@@ -9,10 +9,10 @@
     <generator>Distill</generator>
     <lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>R &lt;3 Redis, with examples in logging and model inference</title>
+      <title>R &lt;3 Redis, from an insurance analytics perspective</title>
       <dc:creator>Kevin Kuo</dc:creator>
       <link>https://blog.kasa.ai/posts/redis</link>
-      <description>Intro to Redis with R and applications</description>
+      <description>Intro to Redis with examples in logging and ML deployment</description>
       <guid>https://blog.kasa.ai/posts/redis</guid>
       <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
     </item>

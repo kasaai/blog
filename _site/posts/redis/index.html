@@ -86,9 +86,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Kasa AI Blog: R &lt;3 Redis, with examples in logging and model inference</title>
+<title>Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective</title>
 
-<meta property="description" itemprop="description" content="Intro to Redis with R and applications"/>
+<meta property="description" itemprop="description" content="Intro to Redis with examples in logging and ML deployment"/>
 
 <link rel="canonical" href="https://blog.kasa.ai/posts/redis/"/>
 
@@ -98,24 +98,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Kevin Kuo"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Kasa AI Blog: R &lt;3 Redis, with examples in logging and model inference"/>
+<meta property="og:title" content="Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Intro to Redis with R and applications"/>
+<meta property="og:description" content="Intro to Redis with examples in logging and ML deployment"/>
 <meta property="og:url" content="https://blog.kasa.ai/posts/redis/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Kasa AI Blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Kasa AI Blog: R &lt;3 Redis, with examples in logging and model inference"/>
-<meta property="twitter:description" content="Intro to Redis with R and applications"/>
+<meta property="twitter:title" content="Kasa AI Blog: R &lt;3 Redis, from an insurance analytics perspective"/>
+<meta property="twitter:description" content="Intro to Redis with examples in logging and ML deployment"/>
 <meta property="twitter:url" content="https://blog.kasa.ai/posts/redis/"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R <3 Redis, with examples in logging and model inference"]},{"type":"character","attributes":{},"value":["Intro to Redis with R and applications"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-29-2021"]},{"type":"character","attributes":{},"value":["intro-redis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/redis/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","slug","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R <3 Redis, from an insurance analytics perspective"]},{"type":"character","attributes":{},"value":["Intro to Redis with examples in logging and ML deployment"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Kevin Kuo"]},{"type":"character","attributes":{},"value":["RStudio, Kasa AI"]}]}]},{"type":"character","attributes":{},"value":["06-29-2021"]},{"type":"character","attributes":{},"value":["intro-redis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://blog.kasa.ai/posts/redis/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2079,7 +2079,7 @@ gtag('config', 'UA-130804330-2');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"R <3 Redis, with examples in logging and model inference","description":"Intro to Redis with R and applications","authors":[{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio, Kasa AI","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-29T00:00:00.000+00:00","citationText":"Kuo, 2021"}
+{"title":"R <3 Redis, from an insurance analytics perspective","description":"Intro to Redis with examples in logging and ML deployment","authors":[{"author":"Kevin Kuo","authorURL":"#","affiliation":"RStudio, Kasa AI","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-29T00:00:00.000+00:00","citationText":"Kuo, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2108,10 +2108,10 @@ gtag('config', 'UA-130804330-2');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>R &lt;3 Redis, with examples in logging and model inference</h1>
+<h1>R &lt;3 Redis, from an insurance analytics perspective</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Intro to Redis with R and applications</p></p>
+<p><p>Intro to Redis with examples in logging and ML deployment</p></p>
 </div>
 
 <div class="d-byline">
@@ -2165,8 +2165,8 @@ gtag('config', 'UA-130804330-2');
 <span class='fu'><a href='https://rdrr.io/pkg/slate/man/peruse.html'>peruse</a></span><span class='op'>(</span><span class='va'>sl</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>2021-07-01 14:14:56.048 ERROR [auto_quotes_1337] Unable to retrive mapping table! 
-2021-07-01 14:14:56.045 INFO [auto_quotes_1337] Quote provided successfully age=28 sex=M make=Tesla model=Model Y premium=420.69</code></pre>
+<pre><code>2021-07-01 14:30:09.790 ERROR [auto_quotes_1337] Unable to retrive mapping table! 
+2021-07-01 14:30:09.789 INFO [auto_quotes_1337] Quote provided successfully age=28 sex=M make=Tesla model=Model Y premium=420.69</code></pre>
 </div>
 <p>Slate is pretty opinionated, but the core functionality can also be implemented as a custom backend in another logging package. If you build apps with R, I encourage you to check out logging with Redis!</p>
 <h1 id="models-in-production">Models in “production”</h1>
@@ -2269,7 +2269,7 @@ gtag('config', 'UA-130804330-2');
 <span class='op'>}</span>
 </code></pre>
 </div>
-<pre><code>Loss at epoch 1: training: 863503962.461538</code></pre>
+<pre><code>Loss at epoch 1: training: 874589761.692308</code></pre>
 </div>
 <p>(Yes, the model performance is horrendous ;))</p>
 <p>Up until this point, we’ve done a vanilla model definition and training loop. The next bits are specific to model deployment. The documentation for the RedisAI commands can be found here<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
@@ -2296,7 +2296,7 @@ gtag('config', 'UA-130804330-2');
 </code></pre>
 </div>
 <pre><code>torch_tensor
- 644.0642
+ 2513.5664
 [ CPUFloatType{1,1} ]</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Save to disk</span>
@@ -2340,7 +2340,7 @@ gtag('config', 'UA-130804330-2');
 </code></pre>
 </div>
 <pre><code>[[1]]
-[1] &quot;2666.3544921875&quot;</code></pre>
+[1] &quot;2269.17724609375&quot;</code></pre>
 </div>
 <h1 id="wrapping-up">Wrapping up</h1>
 <p>We’ve covered some diverse content in this post with the central theme of using Redis for insurance applications. While some of the technical details may seem distant from the core competencies of more traditional actuarial analysts, I’ve been a proponent of becoming familiar with adjacent technologies, if nothing else for easier interactions with MLOps teams and data engineers. Acknowledging that we glossed over some details, such as speeding through the torch bit, we plan to cover them in future blog posts. As always, if you’re interested in contributing, please do reach out! :)</p>

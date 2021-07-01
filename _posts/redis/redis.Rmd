@@ -1,7 +1,7 @@
 ---
-title: "R <3 Redis, with examples in logging and model inference"
+title: "R <3 Redis, from an insurance analytics perspective"
 description: |
-    Intro to Redis with R and applications
+    Intro to Redis with examples in logging and ML deployment
 author:
   - name: Kevin Kuo
     affiliation: RStudio, Kasa AI

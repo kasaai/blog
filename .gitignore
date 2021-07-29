@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 **/.DS_Store
+_posts/redis/internal
+_site/posts/redis/internal
